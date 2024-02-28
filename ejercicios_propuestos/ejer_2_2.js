@@ -7,22 +7,24 @@ contador= 0
     constructor(){
     }
     incrementar(incrementador) {
-        for(let i=0;i<incrementador;i++)this.contador+=2;        
+    this.contador+=incrementador;        
     }
     decrementar(decrementador){
-        for(let i=0;i<decrementador;i++)this.contador-=2;    
+    this.contador-=decrementador;    
     }
-    get cantidadContador() {
+    getcantidadContador() {
         return this.contador;
     }
-    set establecercotador(variable) {
+    setcotador(variable) {
         this.contador = variable;
     }
 }
 const micontador = new contador();
-micontador.incrementar(2);
-console.log(micontador.cantidadContador)
 
-micontador.establecercotador = 0;
-micontador.decrementar(2);
-console.log(micontador.cantidadContador)
+micontador.incrementar(30);
+console.log(micontador.getcantidadContador())
+
+micontador.setcotador(0);
+
+micontador.decrementar(30);
+console.log(micontador.getcantidadContador())
