@@ -15,7 +15,7 @@ contador= 0
     getCantidadContador() {
         return this.contador;
     }
-    setCotador(variable) {
+    setContador(variable) {
         this.contador = variable;
     }
 }
@@ -24,7 +24,7 @@ const micontador = new contador();
 micontador.incrementar(30);
 console.log(micontador.getCantidadContador())
 
-micontador.setCotador(0);
+micontador.setContador(0);
 
 micontador.decrementar(30);
 console.log(micontador.getCantidadContador())
