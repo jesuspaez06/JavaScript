@@ -1,7 +1,7 @@
 function verificacion(num) {
     do {
-        num = prompt("Ingrese la cantidad de numeros fionachi que quieres");
-    } while (num.trim() === '' || isNaN(num.trim()) || num.trim() < 1);
+        num = prompt("Ingrese la cantidad de numeros fionachi que quieres").trim();
+    } while (num === '' || isNaN(num) || num < 1);
     generarFibonacci(parseInt(num))
 }
 function generarFibonacci(num) {
