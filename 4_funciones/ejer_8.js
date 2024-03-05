@@ -5,8 +5,8 @@ function verificacion(contador, array) {
     }
     let num;
     do {
-        num = prompt("Ingrese el número");
-    } while (num.trim() === '' || isNaN(num.trim()));
+        num = prompt("Ingrese el número").trim();
+    } while (num === '' || isNaN(num));
     array.push(parseFloat(num)); // Convertimos el número ingresado a un número de punto flotante y lo agregamos al array
     return verificacion(contador + 1, array);
 }
