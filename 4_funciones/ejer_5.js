@@ -1,7 +1,7 @@
 function verificacion(num) {
     do {
-        num = prompt("Ingrese una temperatura en grados Celsius");
-    } while (num.trim() === '' || isNaN(num.trim()) || +num.trim() < 0);
+        num = prompt("Ingrese una temperatura en grados Celsius").trim();
+    } while (num === '' || isNaN(num) || +num < 0);
     return num; // Agregar return para devolver el valor ingresado
 }
 function verificacionFarenjeiKelvin(FaKe, num) {
