@@ -1,7 +1,7 @@
 function verificacion(num) {
     do {
-        num = prompt("Ingrese el número");
-    } while (num.trim() === '' || isNaN(num.trim()));
+        num = prompt("Ingrese el número").trim();
+    } while (num === '' || isNaN(num));
     return imprimirMultiplicacion(parseInt(num), 1);
 }
 const multi = (numero, contador) => {return numero*contador}
