@@ -1,7 +1,7 @@
 function verificacion(num) {
     do {
-        num = prompt("Ingrese un numero entero");
-    } while (num.trim() === '' || isNaN(num.trim()) || !Number.isInteger(parseFloat(num.trim())));
+        num = prompt("Ingrese un numero entero").trim();
+    } while (num === '' || isNaN(num) || !Number.isInteger(parseFloat(num)));
     IsCero(parseInt(num));
 }
 function IsCero(num) {
