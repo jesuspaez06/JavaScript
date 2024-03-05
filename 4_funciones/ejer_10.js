@@ -1,7 +1,7 @@
 function verificacion(num) {
     do {
-        num = prompt("Ingrese el numero para imprimir de este hasta el 1 ");
-    } while (num.trim() === '' || isNaN(num.trim()));
+        num = prompt("Ingrese el numero para imprimir de este hasta el 1 ").trim();
+    } while (num === '' || isNaN(num));
     checarMayorMenor(parseInt(num))
 }
 function checarMayorMenor(num){
