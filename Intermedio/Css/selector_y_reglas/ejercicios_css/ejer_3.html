@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  .barra-carga-animada {
+    width: 200px;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progreso-animado {
+    height: 100%;
+    width: 0; /* Comienza en 0 para la animación */
+    background-color: #4CAF50;
+    animation: carga 3s ; /* Define la animación */
+}
+
+@keyframes carga {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%; /* Termina al 100% de la barra */
+    }
+}
+.ocultar {
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+    <div class="barra-carga-animada" id="barra-carga">
+        <div class="progreso-animado" id="progreso"></div>
+    </div>
+    
+    <script>
+
+
+   
+    var barraCarga = document.getElementById("barra-carga");
+    var progreso = document.getElementById("progreso");
+   var x =1000
+            var num = 0;
+            for (var i = 0; i < x; i++) {
+                num += i;
+                console.log(num)
+            }
+           console.log("xd")
+    progreso.style.width = "100%";
+
+
+        // Retrasa la ejecución del bucle y la operación para permitir que la animación se complete
+        // Este valor podría ajustarse según sea necesario
+   
+
+
+
+    </script>
+    <script>
+
+    </script>
+</body>
+</html>
