@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programacion en JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            height: 90vh;
+            color: white;
+            background-image: linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url(https://wallpapers.com/images/hd/uncle-iroh-5wh15yjsquu4w8tr.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+ 
+        #hero button {
+            font-size: 1em;
+        }
+
+        #hero h1 {
+            font-size: 5em;
+        }
+
+        #hero h2 {
+            font-size: 2.2em;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <header >
+        <nav
+            class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 py-1 px-6 w-full fixed top-0 z-10 ">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+                </a>
+                <button id="menu-toggle" data-collapse-toggle="navbar-solid-bg" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-solid-bg" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+                    <ul
+                        class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+                        <li>
+                            <a href="#descripcion"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                aria-current="page">Descripcion</a>
+                        </li>
+                        <li>
+                            <a href="#historia"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                aria-current="page">Historia</a>
+                        </li>
+                        <li>
+                            <a href="#personalidad"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                                Personalidad</a>
+                        </li>
+                        <li>
+                            <a href="#relaciones"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                                Relaciones</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section id="hero">
+            <h1>Tío Iroh</h1>
+        </section>
+        <script>
+            document.getElementById('menu-toggle').addEventListener('click', function () {
+                var menu = document.getElementById('navbar-solid-bg');
+                menu.classList.toggle('hidden');
+            });
+
+
+        </script>
+    </header>
+    <main>
+        <section id="tio-iroh" class="p-20">
+            
+            <div id="descripcion" class="mt-16 w-full min-h-60 pt-16">
+            <div  class=" flex justify-between bg-gray-300 p-8 rounded-lg mb-10">
+                <article  class="text w-2/5 p-5">
+                    <h3 class="py-2 font-bold text-2xl" >Descripción del Tío Iroh</h3>
+                    <p>
+                        El Tío Iroh, de "Avatar: La Leyenda de Aang", es un maestro del fuego con una esencia tranquila y sabia. Con su icónica taza de té y sonrisa afable, Iroh irradia calidez y comprensión. Su figura regordeta y relajada esconde una destreza formidable en el combate y un profundo conocimiento espiritual. Viste túnicas tradicionales de la Nación del Fuego y lleva consigo un sentimiento de paz interior que inspira a quienes lo rodean.
+                    </p>
+                </article>
+                <aside class="p-4 w-3/5 mb-1 relative">
+                    <figcaption class="flex justify-center items-end">
+                        <img src="https://elcomercio.pe/resizer/0m3ZT1n06uwg6_piqX2NGiGUo_Q=/1200x1200/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/SWGBQ3VLWVBT5CPQA5UM4R37XI.jpg" alt="Tío Iroh" class="max-h-80 bg-gray-300 p-4 rounded-lg">
+                    </figcaption>
+                </aside>
+                
+                
+            </div>
+        </div>
+        <div id="historia" class="mt-16 w-full min-h-60 pt-16">
+            <div class="flex justify-between bg-gray-300 p-8 rounded-lg mb-10 ">
+                <aside class="p-4 w-3/5 mb-1 relative">
+                    <figcaption class="h-full flex justify-center items-center">
+                        <img src="media/descripcionIroh.webp" alt="Tío Iroh"  class="h-full  w-full object-cover flex justify-center  bg-gray-300 p-4 rounded-lg">
+                    </figcaption>
+                </aside>
+                <article class="text w-2/5">
+                    <h3 class="py-2 font-bold text-2xl" >Historia del Tío Iroh</h3>
+                    <p>
+                        El Tío Iroh, hermano del Señor del Fuego Ozai, fue un destacado general de la Nación del Fuego. Tras la muerte de su hijo en combate, Iroh se retiró emocionalmente y adoptó una actitud pacífica. Durante la serie, acompaña a su sobrino, el príncipe Zuko, en su búsqueda de redención y honor. Aunque inicialmente busca capturar al Avatar, su viaje personal lo lleva a rechazar la guerra y buscar la armonía. Iroh encuentra consuelo y sabiduría en su retiro, convirtiéndose en un mentor y guía para muchos.
+                    </p>
+                </article>
+            </div>
+        </div>
+        <div id="personalidad" class="mt-16 w-full min-h-60 pt-16"></div>
+            <div class="flex justify-between bg-gray-300 p-8 rounded-lg mb-10">
+                <article class="text w-2/5">
+                    <h3 class="py-2 font-bold text-2xl " >Personalidad del Tío Iroh</h3>
+                    <p>
+                        La personalidad del Tío Iroh se caracteriza por su serenidad, sabiduría y humor. A pesar de su pasado militar, abraza la filosofía del equilibrio y la paz interior. Iroh es optimista y compasivo, siempre dispuesto a ofrecer consejos reflexivos y palabras de aliento. Su amor por el té y su capacidad para encontrar belleza en las cosas simples reflejan su conexión con lo espiritual y lo terrenal. Aunque puede ser indulgente y bromista, su determinación y resolución son inquebrantables cuando se trata de proteger a sus seres queridos y defender lo que es justo.
+                    </p>
+                </article>
+                <aside class="p-4 w-3/5 mb-1 relative">
+                    <figcaption class="h-full flex justify-center items-center">
+                        <img src="https://depor.com/resizer/ysl54ifECo2NNs8FoKF1PCzkC9w=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/CIMTHZSA4VDODEGCLARM7KGA5E.jpg" alt="Tío Iroh" class="h-full w-full object-cover bg-gray-300 p-4 rounded-lg">
+                    </figcaption>
+                </aside>
+            </div>
+        </div>
+            <div id="relaciones" class="mt-16 w-full min-h-60 pt-16">
+            <div class="flex justify-between bg-gray-300 p-8 rounded-lg mb-10">
+                <aside class="p-4 w-3/5 mb-1 relative">
+                    <figcaption class="h-full flex justify-center items-center">
+                        <img src="https://uvn-brightspot.s3.amazonaws.com/assets/vixes/a/avatar_la_leyenda_de_aang_4.jpg" alt="Tío Iroh" class="h-full w-full object-cover bg-gray-300 p-4 rounded-lg">
+                    </figcaption>
+                </aside>
+                <article class="text w-2/5">
+                    <h3 class="py-2 font-bold text-2xl" >Relaciones del Tío Iroh con otros personajes</h3>
+                    <p>
+                        El Tío Iroh mantiene relaciones profundas y significativas con varios personajes en "Avatar: La Leyenda de Aang". Su vínculo con su sobrino, el príncipe Zuko, es el más destacado, ya que actúa como su mentor y figura paterna. A través de su guía y apoyo, Iroh ayuda a Zuko a encontrar su camino hacia la redención y la autoaceptación. Además, Iroh forma conexiones con el Avatar Aang y sus amigos, quienes aprecian su sabiduría y consejos. Su presencia calmante y comprensiva deja una impresión duradera en todos los que lo conocen.
+                    </p>
+                </article>
+            </div>
+        </div>
+        </section>
+        
+   
+</body>
+
+<footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <p class="text-sm">&copy; 2024 TriArtInnovators. Todos los derechos reservados.</p>
+
+</footer>
+
+</html>

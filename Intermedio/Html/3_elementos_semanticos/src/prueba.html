@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia Interactiva</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-300">
+    <div class="flex justify-center container mx-auto mt-8">
+        <div class="max-w-md bg-white p-6 rounded-md shadow-md">
+            <div class="story-text mb-4">
+                <p class="text-lg">Bienvenido a nuestra historia interactiva. Haz clic en los enlaces para avanzar en la narrativa:</p>
+                
+            </div>
+            <div class="options flex justify-between">
+                <button class="option bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out" onclick="avanzar('iniciar')">Continuar</button>
+               
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function avanzar(opcion) {
+           
+            if (opcion === 'iniciar') {
+    document.querySelector('.story-text').innerHTML += "<p class='text-lg'> <br> Érase una vez, Un gran Aventurero, estas en una dungeon y te encuentras con unos huecos en el suelo</p>";
+    document.querySelector('.options').innerHTML = "<button class='option bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out' onclick='avanzar(\"opcion1\")'>Investigas las paredes</button>";
+    document.querySelector('.options').innerHTML += "<button class='option bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out' onclick='avanzar(\"muerto\")'>Pasas sin mas</button>";
+}
+else if (opcion === 'opcion1') {
+                document.querySelector('.story-text').innerHTML += "<p class='text-lg'> <br> De alguna forma encuentras una palanca y la empujas por lo que empiezan a salir flechas de los huecos, luego de un rato no salen mas y decides pasar con toda seguridad</p>";
+                document.querySelector('.options').innerHTML = "<button class='option bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out' onclick='avanzar(\"opcion3\")'>Continuar</button>";
+            } else if (opcion === 'opcion2') {
+                document.querySelector('.story-text').innerHTML += "<p class='text-lg'>Las nubes cubrían el cielo y...</p>";
+                document.querySelector('.options').innerHTML = "<button class='option bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out' onclick='avanzar(\"opcion3\")'>Continuar</button>";
+            } else if (opcion === 'opcion3') {
+                document.querySelector('.story-text').innerHTML += "<p class='text-lg'>De repente, un ruido ensordecedor resonó en el pueblo...</p>";
+                document.querySelector('.options').innerHTML = "<button class='option bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out' onclick='avanzar(\"opcion4\")'>Investigar el ruido</button>";
+            } else if (opcion === 'opcion4') {
+                document.querySelector('.story-text').innerHTML += "<p class='text-lg'>Los habitantes del pueblo se reunieron en la plaza...</p>";
+                document.querySelector('.options').innerHTML = "<button class='option bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out' onclick='avanzar(\"opcion5\")'>Descubrir qué está pasando</button>";
+            } else if (opcion === 'opcion5') {
+                document.querySelector('.story-text').innerHTML += "<p class='text-lg'>Una nave espacial aterrizó en el centro del pueblo...</p>";
+                document.querySelector('.options').innerHTML = "<button class='option bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out' onclick='avanzar(\"opcion6\")'>¿Qué sucederá ahora?</button>";
+            } else if (opcion === 'opcion6') {
+                document.querySelector('.story-text').innerHTML += "<p class='text-lg'>La historia continúa...</p>";
+                document.querySelector('.options').innerHTML = "<button class='option bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out' onclick='reiniciar()'>Reiniciar</button>";
+            }else if(opcion === 'muerto'){
+                document.querySelector('.story-text').innerHTML += "<p class='text-lg'>Lamentablemente as muerto era una trampa con flechas y as quedado como un colador</p>";
+                document.querySelector('.options').innerHTML = "<button class='option bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out' onclick='reiniciar()'>Reiniciar</button>";   
+            }
+        }
+
+        function reiniciar() {
+            document.querySelector('.story-text').innerHTML = "<p class='text-lg'>Bienvenido a nuestra historia interactiva. Haz clic en los enlaces para avanzar en la narrativa:</p><p class='text-lg'>Érase una vez, en un pueblo tranquilo...</p>";
+            document.querySelector('.options').innerHTML = "<button class='option bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out' onclick='avanzar(\"opcion1\")'>Comenzar</button>";
+        }
+
+        function muerto() {
+            document.querySelector('.story-text').innerHTML = "<p class='text-lg'>Bienvenido a nuestra historia interactiva. Haz clic en los enlaces para avanzar en la narrativa:</p><p class='text-lg'>Érase una vez, Un gran Aventurero, estas en una dungeon y te encuentras con unos huecos en el suelo</p>";
+            document.querySelector('.options').innerHTML = "<button class='option bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out' onclick='avanzar(\"opcion1\")'>Comenzar</button>";
+        }
+    </script>
+</body>
+</html>

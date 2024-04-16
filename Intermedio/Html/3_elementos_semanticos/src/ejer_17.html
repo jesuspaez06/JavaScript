@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar con Tailwind CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            height: 90vh;
+            color: white;
+            background-image: linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url(media/noticias.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        #hero button {
+            font-size: 1em;
+        }
+
+        #hero h1 {
+            font-size: 5em;
+        }
+
+        #hero h2 {
+            font-size: 2.2em;
+        }
+
+        #somos-tecnologia .container {
+            text-align: center;
+            padding: 50px 12px;
+        }
+
+        #somos-tecnologia .container {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #somos-tecnologia .text {
+            width: 50%;
+            max-width: 600px;
+            text-align: initial;
+            padding-left: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        #somos-tecnologia h1 {
+            margin-top: 0px;
+        }
+
+        #somos-tecnologia .img-container {
+            background-image: linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url(media/);
+            background-size: cover;
+            background-position: center center;
+            height: 700px;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+
+    <header>
+        <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+                </a>
+                <button id="menu-toggle" data-collapse-toggle="navbar-solid-bg" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-solid-bg" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+                    <ul
+                        class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+                        <li>
+                            <a href="#politica"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                aria-current="page">Politica</a>
+                        </li>
+                        <li>
+                            <a href="#deportes"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Deportes</a>
+                        </li>
+                        <li>
+                            <a href="#cultura"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Cultura</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section id="hero">
+        </section>
+        <script>
+            document.getElementById('menu-toggle').addEventListener('click', function () {
+                var menu = document.getElementById('navbar-solid-bg');
+                menu.classList.toggle('hidden');
+            });
+        </script>
+    </header>
+    <main>
+        
+
+
+        
+
+        <section id="somos-tecnologia">
+            <div class="container grid grid-cols-2 gap-4">
+                <div class="text ">
+                    <header>
+                        <h2 id="politica" class="py-2 font-bold text-3xl">Politica </h2>
+                    </header>
+                    <article >
+                        <h3 class="py-2 font-bold text-2xl">Cambios en la política fiscal.</h3>
+                        <p>El gobierno anunció cambios significativos en la política fiscal, incluyendo nuevas medidas para aumentar los impuestos a las grandes empresas y reducir las tasas impositivas para la clase media.</p>
+                    </article>
+                    <article>
+                        <h3 class="py-2 font-bold text-2xl"> Acuerdo bipartidista sobre la reforma electoral.</h3>
+                        <p>Después de meses de negociaciones, los partidos políticos llegaron a un acuerdo bipartidista sobre la reforma electoral, que incluye medidas para mejorar la transparencia en el proceso de votación y fortalecer la seguridad electoral.</p>
+                    </article>
+                    <article>
+                        <h3 class="py-2 font-bold text-2xl">Protestas por derechos civiles.</h3>
+                        <p>Miles de personas salieron a las calles para protestar por los derechos civiles y la igualdad de género, exigiendo cambios en las políticas gubernamentales y una mayor protección de los derechos humanos.</p>
+                    </article>
+                    </div>
+                    <aside class="p-4 w-1/3  justify-end">
+                        <div class="h-full " style="background-image: url(media/politica.jpg); background-position: center center;"></div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="somos-tecnologia">
+            <div class="container">
+                <aside class="p-4 w-1/3  justify-end">
+                    <div class="h-full " style="background-image: url(media/deportes.jpg); background-position: center center;"></div>
+                </aside>
+                <div class="text">
+                    <header>
+                        <h2 id="deportes" class="py-2 font-bold text-3xl">Deportes:</h2>
+                    </header>
+                    <article >
+                        <h3 class="py-2 font-bold text-2xl">Sorpresiva victoria en el campeonato de baloncesto.</h3>
+                        <p>El equipo de baloncesto local logró una sorpresiva victoria en el campeonato nacional, derrotando al favorito del torneo en una emocionante final que mantuvo a los aficionados al borde de sus asientos.</p>
+                    </article>
+                    <article>
+                        <h3 class="py-2 font-bold text-2xl"> Récord mundial en natación.</h3>
+                        <p>Un nadador estableció un nuevo récord mundial en la disciplina de natación de larga distancia, completando la travesía en aguas abiertas en un tiempo récord y dejando atrás a la competencia por una amplia margen.</p>
+                    </article>
+                    <article>
+                        <h3 class="py-2 font-bold text-2xl">Equipo de fútbol clasifica para el torneo internacional.</h3>
+                        <p>El equipo de fútbol de la ciudad logró clasificar para un importante torneo internacional después de una temporada exitosa, demostrando su habilidad y determinación en el campo de juego.</p>
+                    </article>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+
+        <section id="somos-tecnologia">
+            <div class="container">
+                <div class="text">
+                    <header>
+                        <h2 id="cultura" class="py-2 font-bold text-3xl">Cultura: </h2>
+                    </header>
+                    <article >
+                        <h3 class="py-2 font-bold text-2xl">Estreno de una nueva película de ciencia ficción.</h3>
+                        <p>La anticipada película de ciencia ficción "Galaxia en peligro" se estrenó en los cines de todo el país, atrayendo a grandes multitudes con sus efectos especiales innovadores y su emocionante trama.</p>
+                    </article>
+                    <article>
+                        <h3 class="py-2 font-bold text-2xl">Gran éxito de la obra de teatro local.</h3>
+                        <p>La producción teatral local "Sueños de Primavera" recibió elogios de la crítica y del público por su actuación conmovedora y su dirección creativa, convirtiéndose en un éxito de taquilla en la temporada de primavera.</p>
+                    </article>
+                    <article>
+                        <h3 class="py-2 font-bold text-2xl">Exposición de arte contemporáneo en el museo.</h3>
+                        <p>Miles de personas salieron a las calles para protestar por los derechos civiles y la igualdad de género, exigiendo cambios en las políticas gubernamentales y una mayor protección de los derechos humanos.</p>
+                    </article>
+                    </div>
+                    <aside class="p-4 w-1/3  justify-end">
+                        <div class="h-full " style="background-image: url(media/cultura.png); background-position: center center;"></div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    
+
+
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!---Página de Tienda en Línea: Diseña una página de tienda en línea con productos 
+ficticios. Utiliza elementos semánticos para descripciones, precios y opciones de compra. -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Inteligencia Artificial</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            height: 90vh;
+            color: white;
+            background-image: linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url(media/banertienda.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        #hero button {
+            font-size: 1em;
+        }
+
+        #hero h1 {
+            font-size: 5em;
+        }
+
+        #hero h2 {
+            font-size: 2.2em;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <header>
+        <nav
+            class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 py-1 px-6 w-full fixed top-0 z-10 ">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+                </a>
+                <button id="menu-toggle" data-collapse-toggle="navbar-solid-bg" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-solid-bg" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+                    <ul
+                        class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+                        <li>
+                            <a href="#portatil"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                aria-current="page">Computadoras Portatiles</a>
+                        </li>
+                        <li>
+                            <a href="#escritorio"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Computadoras
+                                de Escritorio</a>
+                        </li>
+                        <li>
+                            <a href="#consola"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Consolas</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section id="hero">
+            <h1>TecnoHardware</h1>
+        </section>
+        <script>
+            document.getElementById('menu-toggle').addEventListener('click', function () {
+                var menu = document.getElementById('navbar-solid-bg');
+                menu.classList.toggle('hidden');
+            });
+
+           
+        </script>
+    </header>
+    <main>
+        <h2 class="text-center font-bold text-5xl pt-10"> Productos Mas Vendidos por Categoria</h2>
+        <section id="somos-tecnologia" class="p-20 ">
+            <div class="flex justify-between bg-gray-300 p-4 rounded-lg mb-10">
+
+                <article class="text w-2/5 ">
+                    <h3 class="py-2 font-bold text-2xl ">Portatiles:</h3>
+                    <p>Esta computadora destaca por su potente procesador, amplia memoria y almacenamiento rápido. Con
+                        una tarjeta gráfica de alto rendimiento y una pantalla de calidad, ofrece una experiencia
+                        excepcional tanto para el trabajo como para el entretenimiento. Es una opción destacada en el
+                        mercado de computadoras portátiles.</p>
+                    <p>Este portátil tiene un precio de <strong>$1000 (usd)</strong>. Su precio refleja su excelente
+                        rendimiento.</p>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">
+                        Comprar
+                    </button>
+                    <a href="#portatil" class="mostrarContenido  hover:text-red-500">Mostrar más...</a>
+                    <ul class="py-2 " id="portatil" style="display: none;">
+                        <li>Procesador: Intel Core i7 de décima generación</li>
+                        <li>Memoria RAM: 16 GB DDR4</li>
+                        <li>Almacenamiento: SSD NVMe de 512 GB</li>
+                        <li>Tarjeta gráfica: NVIDIA GeForce RTX 2060 con 6 GB de memoria dedicada</li>
+                        <li>Pantalla: Pantalla IPS de 15.6 pulgadas Full HD (1920 x 1080)</li>
+                        <li>Conectividad: Wi-Fi 6, Bluetooth 5.0</li>
+                        <li>Sistema operativo: Windows 10 Home</li>
+                        <a href="#masPortatiles" class="text-blue-500 hover:text-red-500">Ver mas productos...</a>
+                    </ul>
+
+
+                  
+
+
+                </article>
+
+                <aside class="p-4 w-3/5 mb-1 relative">
+                    <figcaption class="h-full flex justify-center items-center">
+                        <img src="media/PORTATILES.webp"
+                            class="h-full  w-full object-cover absolute  bg-gray-300 p-4 rounded-lg">
+                    </figcaption>
+                </aside>
+
+
+            </div>
+
+
+            <div class="flex justify-between bg-gray-300 p-4 rounded-lg mb-10">
+
+                <aside class="p-4 w-3/5 mb-1 relative">
+                    <figcaption class="h-full flex justify-center items-center">
+                        <img src="media/escritorio.jpg"
+                            class="h-full  w-full object-cover absolute  bg-gray-300 p-4 rounded-lg">
+                    </figcaption>
+                </aside>
+                <article class="text w-2/5 " id="portatil">
+                    <h3 class="py-2 font-bold text-2xl ">Equipos:</h3>
+                    <p>Compra esta computadora de escritorio para obtener un rendimiento excepcional en juegos, diseño y
+                        multitarea. Equipada con hardware potente y amplio almacenamiento, garantiza una experiencia
+                        informática sin igual. Además, su eficiencia energética y su diseño elegante la hacen perfecta
+                        para cualquier espacio de trabajo.</p>
+                    <p>Este equipo de escritorio tiene un precio de <strong>$2,500 (usd)</strong>. Con hardware de
+                        vanguardia y amplio almacenamiento, ofrece un rendimiento incomparable.</p>
+                    <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-3"
+                        href="#vermas">Comprar</a>
+                        <a href="#escritorio" class="mostrarContenido  hover:text-red-500">Mostrar más...</a>
+                        <ul class="py-2 " id="escritorio" style="display: none;">
+                        <h4 class="font-bold">Especificaciones de la computadora de escritorio:</h4>
+                        <li>Procesador: Intel Core i7-11700K</li>
+                        <li>RAM: 32 GB DDR4</li>
+                        <li>Almacenamiento: SSD NVMe de 1 TB + HDD de 2 TB</li>
+                        <li>Tarjeta gráfica: NVIDIA GeForce RTX 3080</li>
+                        <li>Conectividad: Wi-Fi 6, Bluetooth 5.0</li>
+                        <li>Sistema operativo: Windows 11 Pro</li>
+                    </ul>
+                </article>
+
+
+            </div>
+
+
+            <div class="flex justify-between bg-gray-300 p-4 rounded-lg mb-10" id="escritorio">
+
+                <article class="text w-2/5 ">
+                    <h3 class="py-2 font-bold text-2xl ">Consolas:</h3>
+                    <h4 class="font-bold">Especificaciones de una PlayStation 5 (PS5):</h4>
+                    <p>La PlayStation 5 ofrece una experiencia de juego de última generación con gráficos impresionantes
+                        y tiempos de carga ultrarrápidos. Con su potente hardware y una amplia variedad de exclusivas,
+                        es una compra indispensable para los amantes de los videojuegos.</p>
+                    <p>La PlayStation 5, a <strong>$500 (usd)</strong>. brinda experiencias de juego inigualables</p>
+                    <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-3"
+                        href="#vermas">Comprar</a>
+                        <a href="#consola" class="mostrarContenido  hover:text-red-500">Mostrar más...</a>
+                    <ul class="py-2 " id="consola" style="display: none;">
+                        <li>Procesador: CPU AMD Zen 2 de 8 núcleos a 3.5 GHz</li>
+                        <li>GPU: AMD RDNA 2 de 10.28 TFLOPs</li>
+                        <li>Memoria RAM: 16 GB GDDR6</li>
+                        <li>Almacenamiento: SSD NVMe de 825 GB</li>
+                        <li>Unidad óptica: 4K UHD Blu-ray</li>
+                    </ul>
+
+
+                </article>
+
+                <aside class="p-4 w-3/5 mb-1 relative">
+                    <figcaption class="h-full flex justify-center items-center">
+                        <img src="media/play5.jpg"
+                            class="h-full  w-full object-cover absolute  bg-gray-300 p-4 rounded-lg">
+                    </figcaption>
+                </aside>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <script>
+        // Obtener todos los elementos de la clase "mostrarContenido"
+        var enlacesMostrar = document.querySelectorAll(".mostrarContenido");
+
+        // Agregar un evento de clic a cada elemento
+        enlacesMostrar.forEach(function (enlace) {
+            enlace.addEventListener("click", function (event) {
+                event.preventDefault(); // Evita que se siga el enlace
+                var idContenido = this.getAttribute("href"); // Obtener el id del contenido
+                var contenido = document.querySelector(idContenido);
+
+                // Obtener el estilo calculado del contenido
+                var estiloCalculado = window.getComputedStyle(contenido);
+
+                // Verificar si el contenido está visible o no
+                if (estiloCalculado.getPropertyValue("display") === "none") {
+                    contenido.style.display = "block";
+                } else {
+                    contenido.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+<section class="flex">
+    <img class="w-1/4" src="media/logo_mercado_pago.png" alt="">
+    <img class="w-3/4" src="media/payment_methods.png" alt="">
+</section>
+<footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <p class="text-sm">&copy; 2024 TecnoHardware. Todos los derechos reservados.</p>
+       
+</footer>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista con Subopciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="p-4">
+    <ol class="list-decimal opcion">
+        <li id="UnoUno" class="opcion mb-2">
+            <a href="#DosUno" class="opcion">Opción 1</a></li>
+        <li id="UnoDos" class="opcion mb-2">
+            <a href="#DosDos" class="opcion">Opción 2</a></li>
+        <li id="UnoTres" class="opcion mb-2">
+            <a href="#DosTres" class="opcion">Opción 3</a></li>
+
+        <ul id="DosUno" class="opcion" style="display: none;">
+            <li>SubOpción 1a</li>
+            <li>SubOpción 2</li>
+            <li>SubOpción 3</li>
+        </ul>
+        <ul id="DosDos" class="opcion" style="display: none;">
+            <li>SubOpción 1v</li>
+            <li>SubOpción 2</li>
+            <li>SubOpción 3</li>
+        </ul>
+        <ul id="DosTres" class="opcion" style="display: none;">
+            <li>SubOpción 1c</li>
+            <li>SubOpción 2</li>
+            <li>SubOpción 3</li>
+        </ul>
+        </ol>
+
+    <script>
+        // Función para manejar el clic en los enlaces
+        function toggleOptions(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            var targetId = this.getAttribute('href').substring(1); // Obtiene el ID del objetivo
+            var allLists = document.querySelectorAll('.opcion > ul'); // Obtiene todas las listas de subopciones
+            allLists.forEach(function (list) {
+                if (list.id !== targetId) {
+                    // Si la lista no coincide con el ID del objetivo, la oculta
+                    list.style.display = 'none';
+                }
+            });
+            var targetList = document.getElementById(targetId); // Obtiene la lista correspondiente
+            // Muestra u oculta la lista seleccionada según su estado actual
+            targetList.style.display = (targetList.style.display === 'none') ? 'block' : 'none';
+        }
+
+        // Agrega el evento de clic a todos los enlaces con la clase 'opcion'
+        var links = document.querySelectorAll('.opcion');
+        links.forEach(function (link) {
+            link.addEventListener('click', toggleOptions);
+        });
+    </script>
+</body>
+
+</html>

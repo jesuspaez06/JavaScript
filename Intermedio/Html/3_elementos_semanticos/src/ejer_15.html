@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desplegar Contenido con Lista</title>
+    <style>
+        /* Estilos CSS */
+        .contenido {
+            display: none;
+            /* Oculta el contenido de las preguntas por defecto */
+            margin-top: 20px;
+        }
+
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            height: 90vh;
+            color: white;
+            background-image: linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url(media/bannerrelog.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        #hero button {
+            font-size: 1em;
+        }
+
+        #hero h1 {
+            font-size: 5em;
+        }
+
+        #hero h2 {
+            font-size: 2.2em;
+        }
+
+        #somos-tecnologia .container {
+            text-align: center;
+            padding: 50px 12px;
+        }
+
+        #somos-tecnologia .container {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #somos-tecnologia .text {
+            width: 50%;
+            max-width: 600px;
+            text-align: initial;
+            padding-left: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        #somos-tecnologia h1 {
+            margin-top: 0px;
+        }
+
+        #somos-tecnologia .img-container {
+            background-image: linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url(media/);
+            background-size: cover;
+            background-position: center center;
+            height: 700px;
+            width: 500px;
+        }
+
+        ul li a {
+            color: black; /* Cambiar el color del texto a negro */
+            text-decoration: none; /* Quitar subrayado */
+        }
+        
+    </style>
+</head>
+
+<body>
+
+
+
+    <section id="hero">
+      
+    </section>
+
+    <section id="somos-tecnologia">
+        <div class="container">
+            <div class="text">
+                <header>
+                    <h2>Preguntas frecuentes: </h2>
+                </header>
+
+                <ul>
+                    <li><a href="#contenido1" class="mostrarContenido"><h3>¿Cuál es la duración de la batería del SmartWatch X1 y cuánto tiempo tarda en cargarse?</h3></a></li>
+                    <div id="contenido1" class="contenido">
+                        <p>El SmartWatch X1 cuenta con una batería de larga duración que ofrece hasta 7 días de autonomía con una sola carga. Además, ofrece carga rápida para una recarga conveniente en poco tiempo.</p>
+                    </div>
+                    <li><a href="#contenido2" class="mostrarContenido"><h3>¿Qué tipo de certificación de resistencia tiene el SmartWatch X1 contra el agua y el polvo?</h3></a></li>
+                    <div id="contenido2" class="contenido">
+                        <p>El SmartWatch X1 cuenta con certificación IP68, lo que significa que es resistente al agua y al polvo. Esto garantiza que el dispositivo pueda sumergirse en agua hasta cierta profundidad y esté protegido contra la entrada de polvo.</p>
+                    </div>
+                    <li><a href="#contenido3" class="mostrarContenido"><h3>¿El SmartWatch X1 es compatible con dispositivos iOS y Android?</h3></a></li>
+                    <div id="contenido3" class="contenido">
+                        <p>Sí, el SmartWatch X1 es compatible tanto con dispositivos iOS como Android. Puede conectarse y sincronizarse fácilmente con teléfonos inteligentes y tablets que ejecuten estos sistemas operativos.</p>
+                    </div>
+                    <li><a href="#contenido4" class="mostrarContenido"><h3>¿El SmartWatch X1 cuenta con funciones de seguimiento de actividad física y salud?</h3></a></li>
+                    <div id="contenido4" class="contenido">
+                        <p>Sí, el SmartWatch X1 incluye funciones de monitoreo de actividad física como pasos, distancia, frecuencia cardíaca y calidad del sueño, además de notificaciones inteligentes para llamadas, mensajes y redes sociales.</p>
+                    </div>
+                    <li><a href="#contenido5" class="mostrarContenido"><h3>¿Qué tipo de pantalla tiene el SmartWatch X1 y qué funciones de conectividad ofrece?</h3></a></li>
+                    <div id="contenido5" class="contenido">
+                        <p> El SmartWatch X1 presenta una pantalla táctil a color de alta resolución. Además, ofrece conectividad Bluetooth para sincronización con dispositivos móviles y tiene GPS integrado para seguimiento de ubicación.</p>
+                    </div>
+                </ul>
+            
+            </div>
+            <aside>
+                <div class="img-container" style="background-image:
+        url(media/smartwatch1.jpg);">
+            </aside>
+        </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        // Obtener todos los elementos de la clase "mostrarContenido"
+        var enlacesMostrar = document.querySelectorAll(".mostrarContenido");
+
+        // Agregar un evento de clic a cada elemento
+        enlacesMostrar.forEach(function (enlace) {
+            enlace.addEventListener("click", function (event) {
+                event.preventDefault(); // Evita que se siga el enlace
+                var idContenido = this.getAttribute("href"); // Obtener el id del contenido
+                var contenido = document.querySelector(idContenido);
+
+                // Obtener el estilo calculado del contenido
+                var estiloCalculado = window.getComputedStyle(contenido);
+
+                // Verificar si el contenido está visible o no
+                if (estiloCalculado.getPropertyValue("display") === "none") {
+                    contenido.style.display = "block";
+                } else {
+                    contenido.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
