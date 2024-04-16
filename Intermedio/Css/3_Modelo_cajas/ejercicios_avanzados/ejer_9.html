@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #caja{
+            width: 200px;
+            height: 200px;
+            border: var(--border-size) solid black;
+             --border-size: 42px;
+             border-image-slice: 200;
+          border-image-source: url(https://media.istockphoto.com/id/497315730/es/foto/marco-oro-vintage-aislado-sobre-fondo-blanco.jpg?s=612x612&w=0&k=20&c=a5ANMo9gGGGeE4fOTNyu3YcmZH3TufTnmm9MMJ4mBO8=);
+          transition: opacity 1s ease;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <main  id="caja">
+      <div id="distance">Distance to caja: </div>
+<p>elemento caja</p>
+    </main>
+    <script >
+     document.addEventListener('DOMContentLoaded', function() {
+    var caja = document.getElementById('caja');
+    var distanceDisplay = document.getElementById('distance');
+
+    document.addEventListener('mousemove', function(event) {
+        var mouseX = event.clientX;
+        var mouseY = event.clientY;
+
+        var rect = caja.getBoundingClientRect();
+        var cajaX = rect.left + rect.width / 2;
+        var cajaY = rect.top + rect.height / 2;
+
+        var distance = Math.sqrt(Math.pow(mouseX - cajaX, 2) + Math.pow(mouseY - cajaY, 2));
+
+        distanceDisplay.textContent = 'Distance to caja: ' + distance.toFixed(2) + 'px';   
+        if (distance>400) caja.style.opacity = "0"; 
+        else if(distance > 220) caja.style.opacity = "0.5"; 
+        else caja.style.opacity = "1"; 
+    });
+});
+
+  </script>
+</body>
+</html>
