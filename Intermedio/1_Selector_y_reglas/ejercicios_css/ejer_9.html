@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#enviarComentario {
+    display: flex;
+    padding-top: 80px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#enviarComentario article {
+    text-align: center;
+    background-color: white;
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#enviarComentario h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#enviarComentario h2 {
+    margin-top: 20px;
+}
+
+#enviarComentario input, button, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#enviarComentario input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#enviarComentario button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#enviarComentario input[type="text"]:hover,
+#enviarComentario input[type="email"]:hover, textarea:hover {
+    border-color: #0056b3; 
+}
+
+#enviarComentario button:hover {
+    background-color: #0056b3;
+}
+#comentarios{
+    background-color: darkgrey;
+    width: 100%;
+}
+.comentario {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: rgb(209, 209, 209);
+            box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+            border-radius: 10px;
+        }
+        #seccion2{
+            padding: 100px;
+        }
+        textarea{
+            resize: none;
+        }
+        .fotoperfil, .imagenPerfil{
+            height: 40px;
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <section id="enviarComentario">
+        <article>
+            <form id="formularioComentario">
+                <h1>Ingresa tu Comentario</h1>
+                <h2>Nombre</h2>
+                <input type="text" id="nombre" name="nombre" required>
+                <h2>Correo</h2>
+                <input type="text" id="correo" name="correo" required>
+                <h2>Comentario</h2>
+                <textarea name="comentario" required id="comentario" cols="30" rows="10"></textarea>
+                <button type="submit">Enviar comentario</button>
+            </form>
+        </article>
+    </section>
+   
+  
+<section id="seccion2" >
+    <h2>Comentarios</h2>
+  <div id="seccionComentarios">
+      <!-- Aquí se mostrarán los comentarios -->
+  </div>
+</section>
+ <script>
+    
+    var comentarios = [
+        {
+            nombre: "Juan Perez",
+            correo: "juan@example.com",
+            comentario: "¡Excelente página de IA!"
+        },
+        {
+            nombre: "María Lucia",
+            correo: "maria@example.com",
+            comentario: "Interesante artículo sobre inteligencia artificial."
+        },
+        {
+            nombre: "Pedro Puentes",
+            correo: "pedro@example.com",
+            comentario: "Me gustaría aprender más sobre IA."
+        }
+    ];
+
+    // Función para mostrar los comentarios
+    function mostrarComentarios() {
+        var seccionComentarios = document.getElementById("seccionComentarios");
+        seccionComentarios.innerHTML = ""; // Limpiamos la sección antes de mostrar los comentarios
+
+        comentarios.forEach(function(comentario) {
+        
+            var comentarioDiv = document.createElement("div");
+            comentarioDiv.classList.add("comentario");
+
+            var imagenPerfil = document.createElement("img");
+            imagenPerfil.src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"; // URL de la imagen para todos los comentarios
+            imagenPerfil.alt = "Imagen de perfil";
+            imagenPerfil.classList.add("fotoperfil");
+
+            var nombreP = document.createElement("p");
+nombreP.innerHTML = "<strong>" + comentario.nombre + "</strong>";
+
+            var correoP = document.createElement("p");
+            correoP.innerHTML = "<strong>" + comentario.correo + "</strong>";
+            var comentarioP = document.createElement("p");
+            comentarioP.textContent = comentario.comentario;
+
+            comentarioDiv.appendChild(imagenPerfil);
+            comentarioDiv.appendChild(nombreP);
+            comentarioDiv.appendChild(correoP);
+            comentarioDiv.appendChild(comentarioP);
+
+            seccionComentarios.appendChild(comentarioDiv);
+        });
+    }
+
+    // Función para manejar el envío del formulario
+    document.getElementById("formularioComentario").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del formulario
+
+        // Obtener los valores del formulario
+        var nombre = document.getElementById("nombre").value;
+        var correo = document.getElementById("correo").value;
+        var comentario = document.getElementById("comentario").value;
+
+        // Agregar el nuevo comentario al array de comentarios
+        comentarios.push({ nombre: nombre, correo: correo, comentario: comentario });
+
+        // Mostrar los comentarios actualizados
+        mostrarComentarios();
+
+        // Limpiar el formulario
+        document.getElementById("formularioComentario").reset();
+    });
+
+    // Mostrar los comentarios al cargar la página
+    mostrarComentarios();
+</script>
+</script>
+
+</style>
+</body>
+</html>

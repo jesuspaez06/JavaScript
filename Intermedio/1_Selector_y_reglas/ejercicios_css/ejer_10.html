@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background: #000;
+            min-height: 200vh;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.6s;
+            padding:26px 20px; 
+            z-index: 100000;
+        }
+        header.sticky{
+            padding: 16px 25px;
+            background: #fff; 
+        }
+
+        header.sticky  ul li a{
+            color: #000;
+        }
+        header.sticky ul li a {
+            padding: 16px 25px;
+        }
+        header ul{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header ul li{
+            position: relative;
+            list-style: none;
+        }
+        header ul li a {
+            position: relative;
+            margin: 0 0px;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 2px;
+            font-weight: 500px;
+            transition: 0.6s;
+            padding:26px 20px; 
+            background: transparent; 
+        }
+
+        
+        header ul li a:hover {
+            color: #000; 
+            background: #ff0; 
+        }
+        .banner{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url(https://static.vecteezy.com/system/resources/previews/007/169/450/non_2x/abstract-dark-background-with-blue-neon-glowing-vector.jpg);
+            background-size: cover;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contactos</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <section class="banner"></section>
+    <script>
+        window.addEventListener("scroll",function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+</body>
+</html>
