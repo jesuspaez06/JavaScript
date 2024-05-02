@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        background-color: #0004ff;
+        font-family: sans-serif;
+    }
+    .main-menu{
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #4c00ff;
+        transform: translateY(-100%);
+        transition: transform 0.3s;
+    }
+    img{
+        max-width: 100%;
+    }
+    .toggle-menu{
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        cursor: pointer;
+        filter:invert(1);
+        width: 40px;
+        z-index: 1;
+    }
+    .main-menu_link{
+        color: white;
+        text-decoration: none;
+    }
+    .main-menu_item{
+        padding: 1em;
+    }
+
+    @media screen and (min-width: 768px){
+   .main-menu{
+    flex-direction: row;
+    transform: translateY(0);
+   }
+   .toggle-menu{
+    display: none;
+   }
+}
+.main-menu_show{
+    transform: translateY(0);
+}
+
+.container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .flex-item {
+            width: calc(33.33% - 20px); 
+            margin-bottom: 20px;
+        }
+
+  
+        @media (max-width: 768px) {
+            .flex-item {
+                width: 100%; 
+                margin-bottom: 20px;
+            }
+        }
+
+      
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+
+      
+        @media (max-width: 768px) {
+            .grid-item {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 10px;
+            }
+        }
+        .container h1,h2{
+            color: white;
+        }
+</style>
+<body>
+    <nav class="main-nav">
+        <div id="toggle-menu" class="toggle-menu">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/2048px-Hamburger_icon.svg.png" alt="">
+        </div>
+        <ul id="main-menu" class="main-menu">
+            <li class="main-menu_item"><a href="#" class="main-menu_link">Inicio</a></li>
+            <li class="main-menu_item"><a href="#" class="main-menu_link">Acerca de</a></li>
+            <li class="main-menu_item"><a href="#" class="main-menu_link">Blog</a></li>
+            <li class="main-menu_item"><a href="#" class="main-menu_link">Mision</a></li>
+            <li class="main-menu_item"><a href="#" class="main-menu_link">Vision</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Ejemplo de Diseño Responsivo</h1>
+
+        <h2>Usando Flexbox</h2>
+        <div class="flex-container">
+            <div class="flex-item" style="background-color: #ffcccb;">Item 1</div>
+            <div class="flex-item" style="background-color: #b0e0e6;">Item 2</div>
+            <div class="flex-item" style="background-color: #98fb98;">Item 3</div>
+        </div>
+
+        <h2>Usando Grid</h2>
+        <div class="grid-container">
+            <div class="grid-item">Item 1</div>
+            <div class="grid-item">Item 2</div>
+            <div class="grid-item">Item 3</div>
+        </div>
+    </div>
+    <script>
+        const toggleMenuElement = document.getElementById("toggle-menu");
+        const mainMenuElement = document.getElementById("main-menu")
+        toggleMenuElement.addEventListener("click",()=>{
+            mainMenuElement.classList.toggle("main-menu_show");
+        })
+    </script>
+</body>
+</html>
