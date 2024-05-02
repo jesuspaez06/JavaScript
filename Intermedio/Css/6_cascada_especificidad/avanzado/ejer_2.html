@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       p{
+        font-size: 16px;
+        color: red;
+       }
+       .mi-clase {
+           font-size: 20px;
+           color: blue;
+                }
+        #mi-clase{
+            font-size: 24px;
+            color: green;
+        }
+/*el que no tiene clase o id aparecera en los que tampoco la tengan ya que el unico estilo que hay para p sin estos son 16px
+el que tenga la clase "mi-clase" tendra pioridad en todos los p que tengan esta clase debido a que se esta especificando mas detalladamente
+el que tenga el id de "mi-clase" tendra pioridad en todos los p que tengan este id debido a que se esta especificando mas detalladamente
+*/ 
+   
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quae ad rem maiores natus quibusdam itaque
+        minima, adipisci suscipit quidem est atque alias delectus repellendus dignissimos reprehenderit expedita nobis
+        eaque!</p>
+    <p class="mi-clase">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde necessitatibus, iste excepturi
+        possimus veritatis, inventore vel minima modi sequi repellendus blanditiis nisi, ducimus praesentium! Eum hic
+        deleniti aperiam quis asperiores.</p>
+  <p id="mi-clase">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi incidunt placeat reprehenderit voluptate aliquid consequatur obcaecati voluptatem odit accusamus totam aperiam doloremque, non, ducimus ipsa fuga nulla magni quos. Impedit!</p>
+</body>
+
+</html>
