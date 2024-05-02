@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <style>
+        .padre {
+            font-size: 14px;
+        }
+
+        .menor16px {
+           
+            width: calc(2 * 14px); /* Calculamos el doble del tamaño de fuente del elemento padre */
+        }
+        .hijo{
+            background-color: rgb(0, 204, 255);
+          
+        }
+    </style>
+</head>
+<body>
+
+<div class="padre">
+    Soy el elemento padre con un tamaño de fuente de 14px.
+    <div class="hijo">Soy el elemento hijo.</div>
+</div>
+
+<script>
+    const padre = document.querySelector('.padre');
+    const hijo = document.querySelector('.hijo');
+
+    const fontSize = window.getComputedStyle(padre).fontSize;
+
+    if (parseInt(fontSize) < 16) {
+        hijo.classList.add('menor16px');
+    }
+</script>
+
+</body>
+</html>
