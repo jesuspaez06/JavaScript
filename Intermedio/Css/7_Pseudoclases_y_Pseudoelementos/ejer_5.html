@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Document</title>
+    <style>
+       
+        ol {
+            list-style-type: none;  
+          
+        }
+        ol li {
+          
+            position: relative;
+        }
+li::before {
+    content: "\2192";
+    left: -30px; 
+    position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ol>
+</body>
+</html>

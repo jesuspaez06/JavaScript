@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Inicio de Sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            position: relative;
+        }
+
+        .input-container input[type="text"],
+        .input-container input[type="password"] {
+            width: 92%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .input-container input:hover[type="text"],
+        .input-container input:hover[type="password"] {
+            background-color: rgb(208, 208, 208);
+        }
+
+
+        .input-container:hover input[type="text"] + .mensaje,
+        .input-container:hover input[type="password"] + .mensaje {
+            opacity: 1;
+        }
+
+        .mensaje {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form action="#" method="post">
+        <div class="input-container">
+            <input type="text" name="username" placeholder="Usuario">
+            <span class="mensaje" data-mensaje="Este es un mensaje de ejemplo">ejemplo: juan@gmail.com</span>
+        </div>
+        <div class="input-container">
+            <input type="password" name="password" placeholder="Contraseña">
+            <span class="mensaje" data-mensaje="Este es un mensaje de ejemplo">ejemplo: juanito123</span>
+        </div>
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+
+        }
+
+        li {
+            padding: 5px;
+        }
+
+        li::before {
+
+            font-family: "Font Awesome 6 Free";
+            position: absolute;
+            transform: translateX(-150%);
+            color: #007BFF;
+        }
+
+        li:nth-child(1)::before {
+            content: "\f073";
+        }
+
+        li:nth-child(2)::before {
+            content: "\f0e0";
+        }
+
+        li:nth-child(3)::before {
+            content: "\f09d";
+        }
+
+        li:nth-child(4)::before {
+            content: "\f007";
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+</body>
+
+</html>
