@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estilo de Enlaces según Dispositivo</title>
+<style>
+/* Estilos generales de los enlaces */
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* Estilos específicos para la impresión */
+@media print {
+  a.info {
+    color: #000; /* Cambiar color */
+    text-decoration: underline; /* Cambiar subrayado */
+  
+  }
+}
+@media only screen {
+    a.info {
+    color: red;
+}
+
+}
+</style>
+</head>
+<body>
+
+<!-- Ejemplo de enlaces -->
+<a href="#">Este es un enlace de prueba</a><br>
+<a href="#">Otro enlace de prueba</a><br>
+<a href="#">Un enlace con la palabra <span class="highlight">info</span> en su texto anclado</a><br>
+<a href="#">Enlace sin la palabra info</a><br>
+
+<script>
+// JavaScript para agregar clase a los enlaces que contienen la palabra "info"
+document.addEventListener("DOMContentLoaded", function() {
+  var enlaces = document.getElementsByTagName("a");
+  for (var i = 0; i < enlaces.length; i++) {
+    if (enlaces[i].textContent.includes("info")) {
+      enlaces[i].classList.add("info");
+    }
+  }
+});
+</script>
+
+</body>
+</html>

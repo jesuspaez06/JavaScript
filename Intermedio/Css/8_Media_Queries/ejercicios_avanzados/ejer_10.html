@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     .elemento{
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            transition: transform 0.5s;
+    }
+    #toggle {
+  display: none; 
+ 
+}
+    @media (pointer: coarse) {
+        #toggle:checked + .elemento {
+  background-color: red;
+  transform: rotate(45deg);
+  
+}
+}
+</style>
+<body>
+    <input type="checkbox" id="toggle">
+    <label for="toggle" class="elemento">elemento</label>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        font-family: sans-serif;
+    }
+    .main-nav{
+        background-color: #4c00ff;
+        height: 50px;
+    }
+    .main-menu{
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #4c00ff;
+        transform: translateY(-100%);
+        transition: transform 0.3s;
+    }
+    img{
+        max-width: 100%;
+    }
+    .toggle-menu{
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        cursor: pointer;
+        filter:invert(1);
+        width: 40px;
+        z-index: 1;
+    }
+    .main-menu_link{
+        color: white;
+        text-decoration: none;
+    }
+    .main-menu_item{
+        padding: 1em;
+    }
+
+    @media screen and (min-width: 600px){
+   .main-menu{
+    flex-direction: row;
+    transform: translateY(0);
+   }
+   .toggle-menu{
+    display: none;
+   }
+}
+.main-menu_show{
+    transform: translateY(0);
+}
+
+@media (orientation: portrait) {
+    .main-nav{
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+}
+
+
+    
+  
+      
+   
+</style>
+<body>
+    <nav class="main-nav">
+        <div id="toggle-menu" class="toggle-menu">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/2048px-Hamburger_icon.svg.png" alt="">
+        </div>
+        <ul id="main-menu" class="main-menu">
+            <li class="main-menu_item"><a href="#" class="main-menu_link">Inicio</a></li>
+            <li class="main-menu_item"><a href="#" class="main-menu_link">Acerca de</a></li>
+            <li class="main-menu_item"><a href="#" class="main-menu_link">Blog</a></li>
+            <li class="main-menu_item"><a href="#" class="main-menu_link">Mision</a></li>
+            <li class="main-menu_item"><a href="#" class="main-menu_link">Vision</a></li>
+        </ul>
+    </nav>
+   <section>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam possimus magnam mollitia dolorem optio molestiae totam, consectetur maiores error facere saepe quisquam eum nobis tenetur. Nemo a deleniti recusandae.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aut quod temporibus quasi facere nulla adipisci, itaque id aperiam cumque consequuntur, eos, magnam voluptate doloribus esse alias quidem beatae sunt.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem a cum eum. Magnam facere laudantium recusandae sequi! Dolorem officia libero dolorum accusamus hic velit voluptatibus, ex magnam, laboriosam labore eveniet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nostrum eaque placeat molestias iusto quibusdam laboriosam eligendi at optio libero! Possimus, assumenda! Numquam repellat aperiam commodi est corrupti similique neque.</p>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aliquid nobis voluptates iste cum ratione architecto beatae eaque, quam quo voluptatem soluta explicabo fugiat adipisci et sapiente obcaecati cumque veritatis.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta deserunt alias error atque a vitae, asperiores est labore quidem sunt recusandae iste eveniet sapiente repellendus ipsa quis amet impedit veritatis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, possimus quia accusantium temporibus atque autem molestiae reiciendis. Voluptas reiciendis soluta illum unde odio, culpa, molestiae, explicabo nihil sit aut cum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quos, temporibus quisquam atque minus consequatur iure reiciendis natus qui excepturi. Saepe unde possimus veniam voluptatum laborum placeat vitae porro architecto.</p>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aliquid nobis voluptates iste cum ratione architecto beatae eaque, quam quo voluptatem soluta explicabo fugiat adipisci et sapiente obcaecati cumque veritatis.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta deserunt alias error atque a vitae, asperiores est labore quidem sunt recusandae iste eveniet sapiente repellendus ipsa quis amet impedit veritatis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, possimus quia accusantium temporibus atque autem molestiae reiciendis. Voluptas reiciendis soluta illum unde odio, culpa, molestiae, explicabo nihil sit aut cum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quos, temporibus quisquam atque minus consequatur iure reiciendis natus qui excepturi. Saepe unde possimus veniam voluptatum laborum placeat vitae porro architecto.</p>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aliquid nobis voluptates iste cum ratione architecto beatae eaque, quam quo voluptatem soluta explicabo fugiat adipisci et sapiente obcaecati cumque veritatis.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta deserunt alias error atque a vitae, asperiores est labore quidem sunt recusandae iste eveniet sapiente repellendus ipsa quis amet impedit veritatis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, possimus quia accusantium temporibus atque autem molestiae reiciendis. Voluptas reiciendis soluta illum unde odio, culpa, molestiae, explicabo nihil sit aut cum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quos, temporibus quisquam atque minus consequatur iure reiciendis natus qui excepturi. Saepe unde possimus veniam voluptatum laborum placeat vitae porro architecto.</p>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aliquid nobis voluptates iste cum ratione architecto beatae eaque, quam quo voluptatem soluta explicabo fugiat adipisci et sapiente obcaecati cumque veritatis.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta deserunt alias error atque a vitae, asperiores est labore quidem sunt recusandae iste eveniet sapiente repellendus ipsa quis amet impedit veritatis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, possimus quia accusantium temporibus atque autem molestiae reiciendis. Voluptas reiciendis soluta illum unde odio, culpa, molestiae, explicabo nihil sit aut cum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quos, temporibus quisquam atque minus consequatur iure reiciendis natus qui excepturi. Saepe unde possimus veniam voluptatum laborum placeat vitae porro architecto.</p>
+
+   </section>
+       
+    <script>
+        const toggleMenuElement = document.getElementById("toggle-menu");
+        const mainMenuElement = document.getElementById("main-menu")
+        toggleMenuElement.addEventListener("click",()=>{
+            mainMenuElement.classList.toggle("main-menu_show");
+        })
+    </script>
+</body>
+</html>
