@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .alert-container {
+            display: none;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-info d-flex justify-content-center align-items-center vh-100">
+
+<form id="loginForm" class="bg-white p-5 rounded-5 text-secondary shadow"
+style="width: 25rem">
+<div class="text-center fs-1 fw-bold">Login</div>
+      <div class="input-group mt-4">
+
+
+    <input type="text" id="username" name="username"   class="form-control bg-light"  placeholder="Username">
+</div>
+<div class="input-group mt-4"></div>
+    <input    class="form-control bg-light" type="password" id="password" name="password"  placeholder="Password">
+</div>
+    <button type="submit" class="btn btn-primary  text-white w-100 mt-4 fw-semibold shadow-sm">Iniciar Sesión</button>
+    <div id="successAlert" class="alert-container alert alert-success mt-3" role="alert">¡Éxito! Sesión iniciada correctamente como usuario "jesus".</div>
+    <div id="warningAlert" class="alert-container alert alert-warning mt-3" role="alert">Advertencia: Por favor, complete todos los campos.</div>
+    <div id="dangerAlert" class="alert-container alert alert-danger mt-3" role="alert">Error: Nombre de usuario o contraseña incorrectos.</div>
+    
+</form>
+
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.querySelectorAll('.alert-container').forEach(function(alert) {
+            alert.style.display = 'none';
+        });
+
+        var username = document.getElementById('username').value.trim();
+        var password = document.getElementById('password').value.trim();
+
+        if (username === '' || password === '') {
+            document.getElementById('warningAlert').style.display = 'block';
+        } else if (username !== 'jesus' || password !== '123') {
+            document.getElementById('dangerAlert').style.display = 'block';
+        } else {
+            document.getElementById('successAlert').style.display = 'block';
+        }
+
+        setTimeout(function() {
+            document.querySelectorAll('.alert-container').forEach(function(alert) {
+                alert.style.display = 'none';
+            });
+        }, 1000);
+    });
+</script>
+
+</body>
+</html>

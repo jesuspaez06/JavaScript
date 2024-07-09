@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        /* Estilos personalizados */
+        body, .bg-dark, .bg-black {
+            background-color: #121212 !important; /* Fondo oscuro */
+        }
+        
+        .navbar, .dropdown-menu {
+            background-color: #1c1c1c !important; /* Fondo oscuro para la barra de navegación y el menú desplegable */
+        }
+
+        .text-white, .dropdown-item, .nav-link, .navbar-brand {
+            color: #e0e0e0 !important; /* Texto claro */
+        }
+
+        .dropdown-item:hover, .nav-link:hover, .navbar-brand:hover {
+            color: #ffffff !important; /* Texto más claro al pasar el cursor */
+        }
+
+        img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.1); /* Borde claro del toggler */
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2899, 99, 99, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            /* Icono del toggler en color claro */
+        }
+
+        /* Colores de los enlaces en el menú desplegable */
+        .dropdown-item {
+            color: #e0e0e0;
+        }
+
+        .dropdown-item:hover, .dropdown-item:focus {
+            color: #ffffff;
+            background-color: #333333;
+        }
+
+    </style>
+    <title>TecnoInovators</title>
+</head>
+
+<body class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand"><span class="text-primary">Tecno</span>Inovators</a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-start"
+                aria-controls="navbar-start" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-start">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="#laptops" class="nav-link">Laptops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#monitores" class="nav-link">Monitores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#tecladosRatones" class="nav-link">Teclados y Ratones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#almacenamiento" class="nav-link">Almacenamiento SSD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#impresoras" class="nav-link">Impresoras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#audífonos" class="nav-link">Audífonos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Vision</a></li>
+                            <li><a class="dropdown-item" href="#">Mision</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Sobre Nosotros</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="mr-3 ml-3 mt-5">
+        <h1 class="text-center pt-5">Descubre los Productos Informáticos Más Innovadores que No Puedes Dejar Pasar</h1>
+    </header>
+
+    <main class="section m-4" >
+        <section id="laptops" class="pt-5 row">
+            <h2 class="text-center mt-5 mb-3">Laptops Ultraligeras con Rendimiento Increíble</h2>
+            <div class="col-sm-12 col-lg-5">
+                <p>Imagina un portátil que combina la potencia de un equipo de sobremesa con la portabilidad de una
+                    tableta. Las laptops ultraligeras son la solución perfecta para profesionales en movimiento.
+                    Equipadas con procesadores de última generación, pantallas de alta resolución y baterías de larga
+                    duración, estas máquinas ofrecen un rendimiento sin concesiones. Marcas como Dell, HP y Apple están
+                    liderando esta tendencia con modelos como el XPS 13, Spectre x360 y el MacBook Air M2. Estos
+                    dispositivos no solo te permitirán trabajar desde cualquier lugar, sino que también añadirán un
+                    toque de elegancia y modernidad a tu rutina diaria.</p>
+            </div>
+            <aside class="col-sm-12 col-lg-7">
+                <img src="https://i.blogs.es/ef0825/zenbook-17-fold-oled/1366_2000.jpeg" alt="">
+            </aside>
+            <button type="button" class="btn btn-primary mt-2 col-lg-5">Comprar</button>
+        </section>
+
+        <section id="monitores" class="pt-5 row">
+            <h2 class="text-center mt-5 mb-3">Monitores Curvos para una Inmersión Total</h2>
+            <div class="col-sm-12 col-lg-5">
+                <p>Si pasas muchas horas frente a la pantalla, un monitor curvo puede transformar tu experiencia visual.
+                    Estos monitores están diseñados para ofrecer una vista panorámica y envolvente, reduciendo la fatiga
+                    ocular y mejorando la productividad. Además, son ideales para gamers y profesionales creativos que
+                    necesitan una representación precisa y vibrante de los colores. Modelos como el Samsung Odyssey G9 y
+                    el LG UltraGear han recibido elogios por su impresionante calidad de imagen y características
+                    avanzadas. Con un monitor curvo, no solo disfrutarás de una mayor inmersión en tus tareas diarias,
+                    sino que también te sentirás más cómodo y productivo.</p>
+            </div>
+            <aside class="col-sm-12 col-lg-7">
+                <img src="https://s1.elespanol.com/2022/08/26/omicrono/hardware/698440535_226685522_1706x960.jpg" alt="">
+            </aside>
+            <button type="button" class="btn btn-secondary mt-2 col-lg-5">Comprar</button>
+        </section>
+
+        <section id="tecladosRatones" class="pt-5 row">
+            <h2 class="text-center mt-5 mb-3">Teclados y Ratones Avanzados para Mayor Productividad</h2>
+            <div class="col-sm-12 col-lg-5">
+                <p>Los teclados y ratones avanzados han evolucionado para convertirse en piezas clave de nuestro ecosistema
+                    digital. Desde teclados mecánicos ergonómicos hasta ratones inalámbricos con múltiples funciones,
+                    estos productos están diseñados para mejorar tu eficiencia y comodidad. Los teclados como el
+                    Logitech MX Keys y los ratones como el Razer Pro Click no solo ofrecen una experiencia de escritura
+                    y navegación superior, sino que también integran características inteligentes que facilitan tu
+                    trabajo. Además, accesorios como las bases de carga inalámbricas y los hubs USB-C permiten una mayor
+                    conectividad y organización en tu espacio de trabajo.</p>
+            </div>
+            <aside class="col-sm-12 col-lg-7">
+                <img src="https://cdn.shopify.com/s/files/1/0354/1827/5972/products/1_Portada-pyxis_1300x857_1839167b-0d34-4427-aa87-979c05d17e7c.png?v=1669301580" alt="">
+            </aside>
+            <button type="button" class="btn btn-success mt-2 col-lg-5">Comprar</button>
+        </section>
+
+        <section id="almacenamiento" class="pt-5 row">
+            <h2 class="text-center mt-5 mb-3">Almacenamiento SSD: Velocidad y Fiabilidad</h2>
+            <div class="col-sm-12 col-lg-5">
+                <p>El almacenamiento es un componente crítico en cualquier configuración informática. Los discos de
+                    estado sólido (SSD) han revolucionado la manera en que almacenamos y accedemos a nuestros datos,
+                    ofreciendo velocidades de lectura y escritura incomparables. Si buscas mejorar el rendimiento de tu
+                    computadora, un SSD es una inversión que vale la pena.
+                    Con un SSD, experimentarás tiempos de carga más rápidos, una mayor eficiencia energética y una
+                    fiabilidad superior para tus datos más importantes. Modelos como el Samsung 970 EVO Plus y el
+                    Crucial MX500 son especialmente recomendados    .</p>
+            </div>
+            <aside class="col-sm-12 col-lg-7">
+                <img src="https://i.blogs.es/b373a7/ssd2/1366_2000.jpg" alt="">
+            </aside>
+            <button type="button" class="btn btn-danger mt-2 col-lg-5">Comprar</button>
+        </section>
+
+        <section id="impresoras" class="pt-5 row">
+            <h2 class="text-center mt-5 mb-3">Impresoras Multifuncionales: Todo en Uno</h2>
+            <div class="col-sm-12 col-lg-5">
+                <p>Las impresoras multifuncionales han dejado de ser simples dispositivos de impresión para convertirse
+                    en centros de productividad integral. Estos equipos no solo imprimen, sino que también escanean,
+                    copian y envían faxes, todo en un solo dispositivo compacto. Marcas como Brother, Canon y HP han
+                    desarrollado impresoras como la Brother MFC-L2750DW y la Canon PIXMA G6020, que son conocidas por su
+                    eficiencia, calidad de impresión y facilidad de uso. Con una impresora multifuncional, podrás
+                    manejar todas tus necesidades de documentación de manera rápida y eficiente, reduciendo el tiempo y
+                    el esfuerzo dedicados a estas tareas.</p>
+            </div>
+            <aside class="col-sm-12 col-lg-7">
+                <img src="https://d34vmoxq6ylzee.cloudfront.net/catalog/product/a/z/azure_4wf66a_1.png" alt="">
+            </aside>
+            <button type="button" class="btn btn-warning mt-2 col-lg-5">Comprar</button>
+        </section>
+
+        <section id="audífonos" class="pt-5 row">
+            <h2 class="text-center mt-5 mb-3">Audífonos Inalámbricos con Cancelación de Ruido</h2>
+            <div class="col-sm-12 col-lg-5">
+                <p>La calidad del sonido y la capacidad de aislarte del ruido externo son cruciales tanto para el
+                    trabajo como para el ocio. Los audífonos inalámbricos con cancelación de ruido te ofrecen una
+                    experiencia auditiva inmersiva y sin interrupciones, permitiéndote concentrarte mejor en tus tareas
+                    o disfrutar de tu música favorita con una calidad excepcional. Modelos como los Sony WH-1000XM4 y
+                    los Bose QuietComfort 45 son líderes en este campo, ofreciendo una combinación perfecta de
+                    comodidad, duración de batería y cancelación de ruido avanzada. Con estos audífonos, cada momento se
+                    convierte en una experiencia auditiva de alta fidelidad, ideal para cualquier entorno.</p>
+            </div>
+            <aside class="col-sm-12 col-lg-7">
+                <img src="https://cdn-3.expansion.mx/dims4/default/e879c1e/2147483647/strip/true/crop/1960x1025+0+0/resize/1800x941!/format/webp/quality/80/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fc7%2Fab%2F07d5baa040e1a267b452767f3ea7%2Funtitled-design-19.jpg" alt="">
+            </aside>
+            <button type="button" class="btn btn-info mt-2 col-lg-5">Comprar</button>
+        </section>
+    </main>
+    <footer class="bg-body-tertiary text-center">
+       
+        <div class="text-center p-3 bg-black text-white" >
+          © 2020 Copyright:
+          <a class="text-body text-white" href="#">TecnoInovators.com</a>
+        </div>
+       
+      </footer>
+  
+       
+
+</html>
