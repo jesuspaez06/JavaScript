@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Mundo Bloguero</title>
+    <style>
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+        }
+
+        .text {
+            height: 240px;
+            overflow: auto;
+        }
+
+        .btn-close {
+            filter: invert(1);
+            /* Hace que el botón de cierre sea blanco */
+        }
+    </style>
+</head>
+<div class="wrapper">
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <div class="h-100">
+            <div class="sidebar-logo">
+                <a href="#">Mundo Bloguero</a>
+            </div>
+            <!-- Sidebar Navigation -->
+            <ul class="sidebar-nav">
+                <li class="sidebar-header">
+                    Herramientas & Componentes
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="fa-solid fa-list pe-2"></i>
+                        Perfil
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="fa-regular fa-comments"></i>
+                        Foro
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard"
+                        aria-expanded="false" aria-controls="dashboard">
+                        <i class="fa-solid fa-sliders pe-2"></i>
+                        Configuracion
+                    </a>
+                    
+                    <ul id="dashboard" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Cambiar Contraseña</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Cambiar Correo</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#auth"
+                        aria-expanded="false" aria-controls="auth">
+                        <i class="fa-regular fa-user pe-2"></i>
+                        Cuenta
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Cambiar Foto</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Cambiar Sobre Mi</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </aside>
+    <!-- Main Component -->
+    <div class="main">
+        <nav class="navbar navbar-expand px-3 border-bottom">
+            <!-- Button for sidebar toggle -->
+            <button class="btn" type="button" data-bs-theme="dark">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbar-start">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+
+                    <li class="nav-item">
+                        <a href="#" class="btn btn-dark rounded"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            Cerrar
+                            Sesión</a>
+
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <main class="content px-3 py-2">
+            <div class="container-fluid">
+                <div class="mb-1">
+
+                    <body>
+
+
+                        <section class="feature justify-content-center ">
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 mb-5">
+                                            <div class="card bg-dark text-white">
+                                                <img src="img/maik-jonietz-_yMciiStJyY-unsplash.jpg"
+                                                    class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="text m-2">
+                                                        <h4 class="card-title">Desarrollando Aplicaciones Web Modernas
+                                                        </h4>
+                                                        <p>Bienvenidos al espacio dedicado a explorar el vasto mundo de
+                                                            la programación en JavaScript, enfocado en el desarrollo de
+                                                            aplicaciones web modernas. Este foro busca ser un punto de
+                                                            encuentro para desarrolladores, desde novatos hasta
+                                                            expertos, interesados en las últimas tendencias, técnicas,
+                                                            herramientas y frameworks que JavaScript tiene para ofrecer.
+                                                        </p>
+                                                    </div>
+                                                    <a type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                                        data-bs-target="#Modal1">Ver Más</a>
+                                                    <div class="card-footer text-center">
+                                                        <h5 class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" title="Comentarios">3</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 mb-5">
+                                            <div class="card bg-dark text-white">
+                                                <img src="img/scott-graham-5fNmWej4tAA-unsplash.jpg"
+                                                    class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="text m-2">
+                                                        <h4 class="card-title">Rincón de Preguntas: ¡Despeja tus Dudas!
+                                                        </h4>
+                                                        <p>En el 'Rincón de Preguntas', extendemos una cálida bienvenida
+                                                            a todas tus inquietudes y consultas. Ya sea sobre temas
+                                                            específicos, dudas puntuales o simplemente curiosidades,
+                                                            este es el espacio donde puedes plantear tus preguntas y
+                                                            encontrar respuestas. Nuestra comunidad está aquí para
+                                                            brindarte apoyo en tu viaje de aprendizaje, así que no dudes
+                                                            en despejar tus dudas y compartir conocimientos con
+                                                            nosotros.</p>
+                                                    </div>
+                                                    <a type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                                        data-bs-target="#Modal2">Ver Más</a>
+                                                    <div class="card-footer text-center">
+                                                        <h5 class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" title="Comentarios">2</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 mb-5">
+                                            <div class="card bg-dark text-white">
+                                                <img src="img/ralston-smith-sEgodrJdMGw-unsplash.jpg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="text m-2">
+                                                        <h4 class="card-title">Tutoriales Interactivos</h4>
+                                                        <p>Descubre una serie de tutoriales interactivos diseñados para
+                                                            mejorar tus habilidades en JavaScript. Desde los conceptos
+                                                            básicos hasta técnicas avanzadas, estos tutoriales te
+                                                            guiarán paso a paso en tu aprendizaje, proporcionando
+                                                            ejemplos prácticos y ejercicios.</p>
+                                                    </div>
+                                                    <a type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                                        data-bs-target="#Modal3">Ver Más</a>
+                                                    <div class="card-footer text-center">
+                                                        <h5 class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" title="Comentarios">5</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 mb-5">
+                                            <div class="card bg-dark text-white">
+                                                <img src="img/marvin-meyer-SYTO3xs06fU-unsplash.jpg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="text m-2">
+                                                        <h4 class="card-title">Recursos y Herramientas</h4>
+                                                        <p>Accede a una recopilación de recursos y herramientas
+                                                            imprescindibles para desarrolladores de JavaScript.
+                                                            Encuentra librerías, frameworks, editores de código y mucho
+                                                            más para optimizar tu flujo de trabajo y aumentar tu
+                                                            productividad.</p>
+                                                    </div>
+                                                    <a type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                                        data-bs-target="#Modal4">Ver Más</a>
+                                                    <div class="card-footer text-center">
+                                                        <h5 class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" title="Comentarios">4</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 mb-5">
+                                            <div class="card bg-dark text-white">
+                                                <img src="img/headway-5QgIuuBxKwM-unsplash.jpg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="text m-2">
+                                                        <h4 class="card-title">Proyectos Destacados</h4>
+                                                        <p>Explora proyectos destacados creados por miembros de nuestra
+                                                            comunidad. Inspírate con las soluciones innovadoras y las
+                                                            mejores prácticas empleadas en estos proyectos, y descubre
+                                                            nuevas ideas para tus propios desarrollos.</p>
+                                                    </div>
+                                                    <a type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                                        data-bs-target="#Modal5">Ver Más</a>
+                                                    <div class="card-footer text-center">
+                                                        <h5 class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" title="Comentarios">6</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-6 mb-5">
+                                            <div class="card bg-dark text-white">
+                                                <img src="img/johnyvino-R54V69BN0MI-unsplash.jpg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="text m-2">
+                                                        <h4 class="card-title">Noticias y Actualizaciones</h4>
+                                                        <p>Mantente al día con las últimas noticias y actualizaciones en
+                                                            el mundo de JavaScript. Aquí encontrarás información sobre
+                                                            nuevas versiones, lanzamientos de herramientas, eventos de
+                                                            la comunidad y mucho más.</p>
+                                                    </div>
+                                                    <a type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                                        data-bs-target="#Modal6">Ver Más</a>
+                                                    <div class="card-footer text-center">
+                                                        <h5 class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" title="Comentarios">7</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+                            </div>
+                </div>
+                </section>
+
+
+
+
+
+
+            </div>
+    </div>
+    </main>
+</div>
+</div>
+
+<!-- Modal 1-->
+<div class="modal fade custom-modal" id="Modal1" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+                <h4 class="modal-title" id="Modal1">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Usuario 1
+                </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Introducción a JavaScript</h4>
+                <p>En este curso introductorio, exploraremos los fundamentos esenciales de JavaScript. Desde la sintaxis básica hasta conceptos avanzados como el manejo de eventos y las promesas, te prepararemos para construir aplicaciones web dinámicas y interactivas.</p>
+                <h5>¿Qué Aprenderás?</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Sintaxis y Estructuras de Control:</strong> Dominarás la sintaxis básica y aprenderás cómo controlar el flujo de tu programa.
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Interactividad y Eventos:</strong> Descubrirás cómo hacer que tus páginas web respondan a las acciones del usuario.
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Manejo de Errores:</strong> Aprenderás estrategias para manejar errores de manera efectiva en tus aplicaciones JavaScript.
+                    </li>
+                </ul>
+                <p>Además, profundizaremos en temas avanzados como la manipulación del DOM y el uso de APIs modernas para enriquecer tus aplicaciones web.</p>
+            </div>
+            
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal1">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Marta López
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>¡Este curso es justo lo que necesitaba para empezar con JavaScript! Los ejemplos y explicaciones son muy claros.</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal1">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Juan Pérez
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>La calidad del contenido es excelente. ¡Gracias por compartir este conocimiento de forma accesible!</p>
+            </div>
+            <div class="modal-footer">
+                <div class="w-100">
+                    <h5>Agregar un comentario</h5>
+                    <textarea class="form-control mb-3" rows="3" placeholder="Escribe tu comentario aquí..."></textarea>
+                    <button type="button" class="btn btn-primary">Agregar comentario</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade custom-modal" id="Modal2" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+                <h4 class="modal-title" id="Modal2">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Jesus Paez
+                </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Rincón de Preguntas: ¡Despeja tus Dudas!</h4>
+                <p>En el 'Rincón de Preguntas', extendemos una cálida bienvenida a todas tus inquietudes y consultas. Ya sea sobre temas específicos, dudas puntuales o simplemente curiosidades, este es el espacio donde puedes plantear tus preguntas y encontrar respuestas. Nuestra comunidad está aquí para brindarte apoyo en tu viaje de aprendizaje, así que no dudes en despejar tus dudas y compartir conocimientos con nosotros.</p>
+                <h5>¿Qué Encontrarás Aquí?</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Respuestas a Preguntas Frecuentes:</strong> Encuentra respuestas a preguntas comunes sobre desarrollo en JavaScript.
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Consejos de Expertos:</strong> Obtén consejos y trucos de desarrolladores experimentados.
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Estrategias para Resolver Problemas:</strong> Aprende estrategias efectivas para resolver problemas de codificación y diseño en JavaScript.
+                    </li>
+                </ul>
+                <p>Además, te animamos a participar activamente, tanto planteando preguntas como compartiendo tus propias experiencias y soluciones. Juntos podemos enriquecer nuestra comprensión y dominio de JavaScript.</p>
+            </div>
+            
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal2">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Maria Gómez
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>¡Estoy muy agradecida por este espacio donde puedo despejar mis dudas sobre JavaScript! Espero aprender mucho y también contribuir con mis conocimientos.</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal2">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Pedro Sánchez
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Este foro es una gran oportunidad para crecer como desarrollador. ¡Gracias por la bienvenida!</p>
+            </div>
+            <div class="modal-footer">
+                <div class="w-100">
+                    <h5>Agregar un comentario</h5>
+                    <textarea class="form-control mb-3" rows="3" placeholder="Escribe tu comentario aquí..."></textarea>
+                    <button type="button" class="btn btn-primary">Agregar comentario</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal 3 -->
+<div class="modal fade custom-modal" id="Modal3" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+                <h4 class="modal-title" id="Modal3">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Diego Fernández
+                </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Tutoriales Interactivos</h4>
+                <p>Descubre una serie de tutoriales interactivos diseñados para mejorar tus habilidades en JavaScript. Desde los conceptos básicos hasta técnicas avanzadas, estos tutoriales te guiarán paso a paso en tu aprendizaje, proporcionando ejemplos prácticos y ejercicios.</p>
+                <h5>¿Qué Encontrarás Aquí?</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Ejemplos Prácticos:</strong> Tutoriales con ejemplos prácticos que puedes seguir y replicar.
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Ejercicios:</strong> Ejercicios para practicar y mejorar tus habilidades.
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Proyectos de Aplicación:</strong> Desafíos prácticos que te ayudarán a aplicar lo aprendido en proyectos reales.
+                    </li>
+                </ul>
+                <p>Te invitamos a explorar cada tutorial a tu propio ritmo, aprovechando al máximo los recursos disponibles para fortalecer tu comprensión y dominio de JavaScript.</p>
+            </div>
+            
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal3">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Luis Ramírez
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Estos tutoriales son justo lo que necesito para mejorar mis habilidades en JavaScript. ¡Gracias por compartir!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal3">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Ana Torres
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Estoy muy emocionada de empezar con estos tutoriales interactivos. ¡Se ven increíbles!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal3">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Carlos Díaz
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>La calidad de estos tutoriales es impresionante. ¡No puedo esperar para aprender más!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal3">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Marta López
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Estos tutoriales interactivos me han ayudado a comprender mejor los conceptos avanzados. ¡Muy recomendable!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal3">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Juan Pérez
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Gracias por los tutoriales. He aprendido mucho y me siento más confiado en mis habilidades.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="w-100">
+                    <h5>Agregar un comentario</h5>
+                    <textarea class="form-control mb-3" rows="3" placeholder="Escribe tu comentario aquí..."></textarea>
+                    <button type="button" class="btn btn-primary">Agregar comentario</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal 4 -->
+<div class="modal fade custom-modal" id="Modal4" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+                <h4 class="modal-title" id="Modal4">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Andrea Morales
+                </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Recursos y Herramientas</h4>
+                <p>Accede a una recopilación de recursos y herramientas imprescindibles para desarrolladores de JavaScript. Encuentra librerías, frameworks, editores de código y mucho más para optimizar tu flujo de trabajo y aumentar tu productividad.</p>
+                <h5>¿Qué Encontrarás Aquí?</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Librerías Populares:</strong> Descubre las librerías más utilizadas por los desarrolladores.
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Frameworks:</strong> Aprende sobre los frameworks que pueden facilitar tu desarrollo.
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Herramientas de Desarrollo:</strong> Explora herramientas útiles para mejorar tu eficiencia en el desarrollo de aplicaciones web.
+                    </li>
+                </ul>
+                <p>Este recurso está diseñado para ayudarte a mantenerse actualizado con las últimas tecnologías y optimizar tu trabajo diario. No dudes en explorar y aprovechar al máximo cada recurso disponible.</p>
+            </div>
+            
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal4">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Sergio Gómez
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>¡Excelente colección de recursos! Me será muy útil para mis próximos proyectos.</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal4">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Laura Pérez
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Los recursos compartidos aquí son increíbles. ¡Gracias por reunir todo en un solo lugar!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal4">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> David Fernández
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>He encontrado herramientas que no conocía y que serán de gran ayuda. ¡Gran trabajo!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal4">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Maria García
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Estos recursos son un tesoro para cualquier desarrollador de JavaScript. ¡Muy agradecida por compartir!</p>
+            </div>
+            <div class="modal-footer">
+                <div class="w-100">
+                    <h5>Agregar un comentario</h5>
+                    <textarea class="form-control mb-3" rows="3" placeholder="Escribe tu comentario aquí..."></textarea>
+                    <button type="button" class="btn btn-primary">Agregar comentario</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 5 -->
+<div class="modal fade custom-modal" id="Modal5" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+                <h4 class="modal-title" id="Modal5">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Isabel González
+                </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Proyectos Destacados</h4>
+                <p>Explora proyectos destacados creados por miembros de nuestra comunidad. Inspírate con las soluciones innovadoras y las mejores prácticas empleadas en estos proyectos, y descubre nuevas ideas para tus propios desarrollos.</p>
+                <h5>¿Qué Encontrarás Aquí?</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Proyectos Innovadores:</strong> Conoce los proyectos más innovadores de la comunidad.
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Buenas Prácticas:</strong> Aprende las mejores prácticas utilizadas en estos proyectos.
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Lecciones Aprendidas:</strong> Descubre las lecciones clave extraídas de cada proyecto para aplicar en futuros desarrollos.
+                    </li>
+                </ul>
+                <p>Explorar estos proyectos no solo te brindará inspiración, sino también insights valiosos que pueden ayudarte a elevar la calidad y eficiencia de tus propios proyectos. ¡No dudes en sumergirte en esta fuente de conocimiento compartido por nuestra comunidad!</p>
+            </div>
+            
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal5">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Ignacio Fernández
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Estos proyectos son realmente inspiradores. ¡Gracias por compartir!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal5">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Paula Rodríguez
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Me encantan las ideas y las soluciones presentadas en estos proyectos. ¡Muy motivador!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal5">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Roberto Lima
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Las mejores prácticas empleadas en estos proyectos me ayudarán a mejorar mis propios desarrollos. ¡Gracias!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal5">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Clara Muñoz
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Este foro es una fuente increíble de inspiración. Los proyectos compartidos aquí son de gran ayuda.</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal5">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Fernando Reyes
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Increíble ver el talento y la creatividad de la comunidad reflejada en estos proyectos. ¡Gracias!</p>
+            </div>
+            <div class="modal-footer">
+                <div class="w-100">
+                    <h5>Agregar un comentario</h5>
+                    <textarea class="form-control mb-3" rows="3" placeholder="Escribe tu comentario aquí..."></textarea>
+                    <button type="button" class="btn btn-primary">Agregar comentario</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal 6 -->
+<div class="modal fade custom-modal" id="Modal6" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+                <h4 class="modal-title" id="Modal6">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> María López
+                </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Noticias y Actualizaciones</h4>
+                <p>Mantente al día con las últimas noticias y actualizaciones en el mundo de JavaScript. Aquí encontrarás información sobre nuevas versiones, lanzamientos de herramientas, eventos de la comunidad y mucho más.</p>
+                <h5>¿Qué Encontrarás Aquí?</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Últimas Versiones:</strong> Información sobre las últimas versiones de JavaScript y sus nuevas características.
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Eventos de la Comunidad:</strong> Mantente informado sobre eventos y conferencias importantes.
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-check pe-2 text-success"></i>
+                        <strong>Recursos y Herramientas:</strong> Descubre recursos adicionales y herramientas recomendadas para mejorar tu flujo de trabajo en JavaScript.
+                    </li>
+                </ul>
+                <p>Explorar estas noticias y actualizaciones te ayudará a mantener un conocimiento actualizado sobre el ecosistema de JavaScript y te preparará para aprovechar al máximo las nuevas oportunidades y herramientas disponibles.</p>
+            </div>
+            
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal6">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Javier Méndez
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Estas actualizaciones son esenciales para estar al día con JavaScript. ¡Gracias por compartirlas!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal6">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Claudia Ruiz
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Me encanta estar informada sobre los eventos de la comunidad. ¡Gran trabajo!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal6">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Andrés García
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Las noticias y actualizaciones aquí compartidas son muy útiles. ¡Gracias por mantenernos informados!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal6">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Silvia Torres
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Siempre espero con ansias las actualizaciones y noticias compartidas aquí. ¡Muy útil!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal6">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Manuel Fernández
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Las noticias aquí publicadas me ayudan a mantenerme actualizado con las últimas tendencias. ¡Gracias!</p>
+            </div>
+            <div class="modal-footer">
+                <h4 class="modal-title" id="Modal6">
+                    <img class="rounded-circle" src="img/user-icon-2048x2048-ihoxz4vq.png"
+                        style="width: 40px; height: auto;"> Carmen Martínez
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <p>Estoy muy agradecida por las actualizaciones constantes. Es genial tener toda la información en un solo lugar.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="w-100">
+                    <h5>Agregar un comentario</h5>
+                    <textarea class="form-control mb-3" rows="3" placeholder="Escribe tu comentario aquí..."></textarea>
+                    <button type="button" class="btn btn-primary">Agregar comentario</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Tooltip -->
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
