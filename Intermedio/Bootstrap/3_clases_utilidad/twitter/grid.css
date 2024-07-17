@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+}
+ header a{
+  text-decoration: none;
+  
+  font-weight: bold;
+ }
+ main .enlace{
+  text-decoration: none;
+ }
+
+ .barranavegacion2 a{
+  text-decoration: none;
+   
+  font-weight: bold;
+  
+ }
+
+ .hide-on-medium {
+  display: none;
+}
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  text-align: center;
+}
+.grid-container > header {
+  padding: 0;
+  
+}
+.header {
+  grid-area: header;
+  background-color: #000000;
+ 
+  
+}
+.space{
+  grid-area: space;
+  background-color: #000000;
+}
+.header2{
+  border-bottom: 1px solid gray; 
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: #000000;
+  }
+  .prueba{
+    position: fixed;
+  top: 0;
+ width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px); /* Ajusta el valor según el nivel de desenfoque que desees */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidad con navegadores WebKit */
+  overflow: hidden;
+  }
+.barranavegacion{
+  position: fixed;
+  bottom: 0px;
+ width: 100%;
+  z-index: 1030; /* Ensure it's above other content */
+      border-top: 1px solid gray; 
+  
+ 
+}
+
+.barranavegacion2{
+  position: fixed;
+ right: 0px;
+ right: 0px;
+ width: 411px;
+ height: 100%;
+  z-index: 1030; /* Ensure it's above other content */
+    background-color: black;
+  color: white;
+  padding: 0px;
+ overflow-y: auto;
+ overflow-x: hidden;
+}
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.barranavegacion2::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.barranavegacion2 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #fdcfcf;
+  display: none; /* Ocultar sidebar por defecto */
+}
+
+.main {
+  grid-area: main;
+  background-color: #f5f5f5;
+ overflow: hidden;
+}
+
+
+
+.grid-container {
+  display: grid;
+
+
+  grid-template:
+    "header"  100px
+    "main"    auto
+ "navbar"  50px    
+    
+}
+
+.main .puntos{
+  right: 8%;
+}
+@media (min-width: 576px) {
+  .grid-container {
+    grid-template:
+      "navbar  header space" 60px
+      "navbar main space"   auto/
+      15.63%    auto   55px;
+      
+  }
+ 
+  .space{
+    border-left: 1px solid gray;  
+    height: 100%;
+  }
+  .main .puntos{
+    right: 2%;
+    top: -4px;
+  }
+  .prueba{
+    width: calc(100% - 175px); /* Ajusta según el tamaño del sidebar y otros elementos */
+     }
+  .sm-vh-100 {
+    min-height: 100vh;
+  }
+  .barranavegacion{
+    top: 0px;
+    left: 0px;
+    width:12.63%;
+     height: 100%;
+     border-top: 0px solid gray; 
+  }
+  .ocultar768{
+    display: none;
+    padding-top: 5000px;
+  }
+
+  .navbar{
+    border-right: 1px solid gray;  
+  }
+  .hide-on-medium {
+    display:block;
+}
+.hide-on-medium-higth{
+  display: none;
+}
+}
+.barranavegacion2{
+  border-left: 1px solid gray; /* Bordes  de 1px */
+  display: none;
+
+}
+
+@media (min-width: 900px) {
+  .sidebar {
+    display: block; /* Mostrar sidebar en pantallas de 900px o más */
+  }
+  .barranavegacion{
+width: 200px   ;
+  }
+  .barranavegacion2{
+    display: block;
+    width: 334px;
+  }
+
+  .grid-container {
+    grid-template:
+      "navbar  header sidebar"  60px
+      "navbar  main   sidebar" auto/
+      9.4%    auto   334px;
+  }
+  .prueba{
+    width: calc(100% - 382px); /* Ajusta según el tamaño del sidebar y otros elementos */
+   }
+   .barranavegacion{
+    width:  7.4%;
+  }
+
+
+   .barranavegacion2 .search-container {
+  width: 300px; 
+  }
+}
+@media (min-width: 1000px) {
+  .prueba{
+    width: calc(100% - 386px); /* Ajusta según el tamaño del sidebar y otros elementos */
+   }
+}
+
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template:
+      "navbar  header sidebar"   60px
+      "navbar  main   sidebar" auto/
+      25.2%    auto   411px;
+  }
+  .barranavegacion{
+    width:  22.2%;
+  }
+
+  .prueba{
+    width: calc(100% - 710px); /* Ajusta según el tamaño del sidebar y otros elementos */
+     }
+     .barranavegacion2{
+      display: block;
+      width: 411px;
+    }
+    .barranavegacion2 .search-container {
+      width: 374px; /* Ancho del contenedor de búsqueda */  
+    }
+    .alinear{
+     padding-left:100px;
+    }
+}
+
+.barra {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  position: relative; /* Importante para el posicionamiento relativo */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+  padding: 0; /* Asegúrate de que no haya relleno */
+}
+.barra > * {
+  margin: 0; /* Elimina márgenes de los elementos hijos */
+  padding: 0; /* Elimina rellenos de los elementos hijos */
+  align-items: start; /* Alinea los elementos al inicio */
+}
+
+.item {
+ 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.item a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+@media (max-width: 575px){
+  .item{
+    font-size: 14px;
+  }
+  .outside-top {
+    position: absolute;
+    top: -70px; /* Mueve el elemento 50px hacia arriba, fuera del contenedor */
+    left: 79%;
+  }
+  .posicionabsoluta{
+    position: absolute;
+  }
+}
+@media (min-width: 2000px) {
+
+}
+@media (max-width: 372px) {
+.hide-on-small {
+    display: none;
+}
+.barra {
+  grid-template-columns: repeat(5, 1fr);
+}
+.item{
+  font-size: 12px;
+}
+}
+
+.linea-horizontal {
+  border: 1px solid white; /* Grosor y color de la línea */
+  width: 100%;
+}
+
+
+.barranavegacion2 .search-container {
+  position: relative;
+  padding-top: 7px;
+}
+
+.barranavegacion2 .search-container input[type="text"] {
+  width: calc(100% - 20px); /* Ajuste el tamaño para dejar espacio para el ícono */
+  padding-left: 50px; /* Ajuste el valor según el tamaño del ícono */
+  padding-right: 20px; /* Espacio adicional después del ícono */
+  height: 40px; /* Altura del input */
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Bordes redondeados */
+  position: relative; /* Añadir posición relativa para poder z-index */
+  z-index: 1; /* Asegurar que el input esté detrás del ícono */
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s; /* Transición suave para el efecto hover y focus */
+  background-color: rgb(17, 17, 17); /* Color de fondo predeterminado */
+  color: black; /* Color de texto predeterminado */
+}
+
+.barranavegacion2 .search-container input[type="text"]:hover {
+  border-color: #007BFF; /* Cambiar el color del borde en hover */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Añadir sombra en hover */
+}
+
+.barranavegacion2 .search-container input[type="text"]:focus {
+  border-color: #007BFF; /* Cambiar el color del borde en focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Añadir sombra en focus */
+  outline: none; /* Quitar el outline predeterminado */
+  background-color: black; /* Cambiar el color de fondo en focus */
+  color: white; /* Cambiar el color del texto en focus */
+}
+
+.barranavegacion2 .search-container input[type="text"]:focus::placeholder {
+  color: white; /* Cambiar el color del placeholder en focus */
+}
+.main   textarea.custom-textarea::placeholder {
+  color: white;
+
+ 
+}
+.main .ocultartextarea {
+  display: none;
+}
+.main .custom-textarea {
+  border: none; /* Quitar el borde */
+      resize: none; /* Desactivar la redimensionabilidad */
+      outline: none; /* Quitar el contorno al enfocar */
+      box-shadow: none; /* Quitar sombra al enfocar */
+      border-radius: 0; /* Quitar redondeo de las esquinas */
+  width: 100%;
+}
+.main .custom-textarea:focus {
+  border-color: #dee2e6; /* Color del borde al enfocar */
+  border-radius: 0; /* Quitar redondeo de las esquinas al enfocar */
+  box-shadow: none; /* Quitar sombra al enfocar */
+
+
+}
+.barranavegacion2 .search-container button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80px; /* Ancho del botón igual al espacio reservado para el ícono */
+  background-color: transparent;
+  border: none;
+  padding: 17px;
+  cursor: pointer;
+  z-index: 2; /* Asegurar que el ícono esté por delante del input */
+  border-top-right-radius: 20px; /* Redondear borde superior derecho del botón */
+  border-bottom-right-radius: 20px; /* Redondear borde inferior derecho del botón */
+  transition: color 0.3s; /* Transición suave para el efecto hover */
+}
+
+.barranavegacion2 .search-container button:hover i {
+  color: #007BFF; /* Cambiar el color del ícono en hover */
+}
+
+.barranavegacion2 .search-container button i {
+  font-size: 18px; /* Tamaño del ícono */
+  color: #666; /* Color del ícono */
+}
+.suscribe {
+  border: 1px solid gray; /* Bordes de color gris de 1px */
+  border-radius: 20px; /* Bordes redondeados */
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s; /* Transición suave para el efecto hover y focus */
+  text-align: left; /* Alineación del texto a la izquierda */
+  font-size: 14px;
+}
+.barranavegacion2 button{
+  border-radius: 20px; /* Bordes redondeados */
+}
+
+
+.barranavegacion2 .showmore:hover {
+  background-color: #161616;
+}
+.barranavegacion2 .superior {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top: 1px solid gray;
+}
+.barranavegacion2 .inferior {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom: 1px solid gray;
+}
+.barranavegacion2 .lateral{
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.barranavegacion2 p{
+  font-size: 12px;
+}
+.showmore a,.barranavegacion2 h5{
+  text-align: start;
+}
+::placeholder {
+  color: white;
+}
+/* Para navegadores webkit (Chrome, Safari, Edge) */
+input::placeholder {
+  color: white;
+}
