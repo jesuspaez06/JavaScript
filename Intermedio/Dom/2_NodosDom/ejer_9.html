@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes con Bootstrap 5</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5 mb-4">Galería de Imágenes</h1>
+
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col" id="imagen1">
+                <div class="card" id="card1">
+                    <img src="img/1.jpg" class="card-img-top" alt="Imagen 1" onclick="eliminar(this)" id="1">
+                    <div class="card-body" id="cb1">
+                        <p class="card-text 1">Montañas con tonalidad morada.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id="imagen2">
+                <div class="card" id="card2">
+                    <img src="img/2.jpg" class="card-img-top" alt="Imagen 2" onclick="eliminar(this)" id="2">
+                    <div class="card-body" id="cb2">
+                        <p class="card-text 2">Montañas con tonalidades grises y azules.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id="imagen3">
+                <div class="card" id="card3">
+                    <img src="img/3.jpg" class="card-img-top" alt="Imagen 3" onclick="eliminar(this)" id="3">
+                    <div class="card-body" id="cb3">
+                        <p class="card-text 3">Un valle montañoso con una laguna y un bosque.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const images = [
+            { src: "img/1.jpg", description: "Montañas con tonalidad morada." },
+            { src: "img/2.jpg", description: "Montañas con tonalidades grises y azules." },
+            { src: "img/3.jpg", description: "Un valle montañoso con una laguna y un bosque." },
+            { src: "img/4.jpg", description: "Montañas con césped y una carretera." },
+            { src: "img/5.jpg", description: "Vista desde un valle hacia el cielo." },
+            { src: "img/6.jpg", description: "Palmeras de playa en el ocaso." },
+            { src: "img/7.jpg", description: "Vista de una zona montañosa y de un cielo estrellado." },
+            { src: "img/8.jpg", description: "Un puente con el clima nublado." },
+            { src: "img/9.jpg", description: "Pintura abstracta donde domina el azul y naranja." },
+            { src: "img/10.jpg", description: "Una playa con vista al mar." },
+            { src: "img/11.jpg", description: "Un río con un bosque y al fondo una zona montañosa." },
+            { src: "img/12.jpg", description: "Un bosque con montañas al fondo." }
+        ];
+
+        function eliminar(img) {
+            // Obtener el ID
+            var idElemento = img.id;
+            var elementos = document.getElementsByClassName(idElemento);
+
+            // Eliminar imagen y descripción asociada
+            img.remove();
+            for (var i = 0; i < elementos.length; i++) {
+                elementos[i].remove();
+            }
+
+            var numeroAleatorio = Math.floor(Math.random() * images.length);
+            console.log(numeroAleatorio);
+
+            // Adición de nuevo párrafo
+            var contenedorImagen = document.getElementById("card" + idElemento);
+            var nuevoImg = document.createElement("img");
+            nuevoImg.src = images[numeroAleatorio].src;
+            nuevoImg.alt = 'Imagen ' + idElemento;
+            nuevoImg.className = 'card-img-top'; // Clase de Bootstrap para imágenes fluidas
+            nuevoImg.id = idElemento; // ID único para la nueva imagen
+            nuevoImg.setAttribute('onclick', 'eliminar(this)'); // Añadir el evento onclick
+            var primerHijo = contenedorImagen.firstChild;
+
+            // Insertar la nueva imagen antes del primer hijo
+            contenedorImagen.insertBefore(nuevoImg, primerHijo);
+
+            var contenedorDescripcion = document.getElementById("cb" + idElemento);
+            var nuevoP = document.createElement("p");
+            var textNode = document.createTextNode(images[numeroAleatorio].description);
+            nuevoP.appendChild(textNode);
+            nuevoP.className = idElemento; // Clase para identificar la descripción
+            contenedorDescripcion.appendChild(nuevoP);
+
+            console.log("ID del elemento eliminado:", idElemento);
+        }
+    </script>
+</body>
+
+</html>

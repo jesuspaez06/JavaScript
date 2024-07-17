@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="cuerpo">
+    <h1>Lorem ipsum dolor sit amet consectetur </h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus distinctio quas dolorum vitae neque,
+        voluptatibus voluptatem eaque alias amet consequatur commodi non aperiam, modi asperiores, consequuntur placeat
+        qui enim? Quae.</p>
+    <button id="comentario" onclick="agregarComentario()">Cambiar modo</button>
+   
+</body>
+<script>
+    function agregarComentario(button) {
+        const cuerpo = document.getElementById('cuerpo');
+        if (cuerpo.style.backgroundColor != "black") {
+            cuerpo.style.backgroundColor = "black";
+            cuerpo.style.color = "white";
+        }
+        else {
+            cuerpo.style.backgroundColor = "white";
+            cuerpo.style.color = "black";
+        }
+    }
+
+</script>
+
+</html>

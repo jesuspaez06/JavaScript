@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="lista">
+        <li id="item1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit vero earum iusto, mollitia
+            eveniet excepturi expedita, exercitationem dolor dolores quas vitae eum, provident sapiente quibusdam!
+            Consequuntur animi eaque cupiditate obcaecati!
+            <button id="eliminar" onclick="eliminar(this)">eliminar</button>
+        </li>
+        <li id="item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat magni, deleniti numquam
+            ratione, nihil voluptas quos odio praesentium iusto dolore voluptatibus perferendis eaque placeat accusamus?
+            Odio, facere doloremque? Iste, a.
+            <button id="eliminar" onclick="eliminar(this)">eliminar</button>
+        </li>
+        <li id="item3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptates magnam et culpa, vitae
+            minima perferendis architecto vel distinctio esse reprehenderit quibusdam? Esse quibusdam est eaque natus
+            unde culpa neque!
+            <button id="eliminar" onclick="eliminar(this)">eliminar</button>
+        </li>
+    </ul>
+  
+    <textarea name="txtagregar" id="txtagregar"></textarea>
+    <button onclick="agregar()" id="btnAgregar">agregar</button>
+</body>
+<script>
+    function eliminar(button) {
+        var elementoPadre = button.parentElement;
+        var parentId = elementoPadre.id;
+        elementoPadre.remove();
+        console.log(parentId);
+    }
+    function agregar() {
+        /*encontrar el txt y su contenido */
+        var textAgregar = document.getElementById("txtagregar").value;
+        var nuevoli = document.createElement("li");
+        var textNode = document.createTextNode(textAgregar);
+        nuevoli.appendChild(textNode);
+
+        /*Formato del boton de eliminar */
+        var btnEliminar = document.createElement("button");
+        btnEliminar.textContent = "eliminar";
+        btnEliminar.onclick = function () {
+            eliminar(this);
+        };
+        nuevoli.appendChild(btnEliminar);
+
+        const lista = document.getElementById("lista");
+        lista.appendChild(nuevoli);
+    }
+</script>
+
+</html>

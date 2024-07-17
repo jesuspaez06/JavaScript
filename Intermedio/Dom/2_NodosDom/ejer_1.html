@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quidem placeat amet sed, laborum quos
+        commodi, quisquam culpa necessitatibus ullam porro voluptates ipsa pariatur velit rem eligendi natus inventore
+        at.</h1>
+    <p id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestias dolore fugit ab, ipsa cum
+        mollitia ducimus quasi? Quaerat repellendus explicabo quod modi laudantium dolorem tempore, aliquam
+        necessitatibus numquam vitae.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aut ad dignissimos quas consectetur nam
+        blanditiis, ut esse aspernatur, odit eaque adipisci fuga recusandae iure quam nobis nihil, quidem placeat.
+    </p>
+    <button onclick="cambiarTexto()">Cambiar texto</button>
+</body>
+<script>
+    function cambiarTexto() {
+        var elementTitle = document.getElementById("title");
+        var elementContent = document.getElementById("content");
+        elementTitle.textContent = "Contenido del titulo editado";
+        elementContent.textContent = "Contenido del parrafo editado";
+    }
+</script>
+
+</html>

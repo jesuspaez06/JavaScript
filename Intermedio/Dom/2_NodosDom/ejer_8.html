@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        background-color: yellow;
+    }
+</style>
+<body>
+    <H1>TAREAS</H1>
+        <h4 style="background-color: yellow;">Tarea En Proceso</h4>
+        <h4 style="background-color:#90EE90 ;">Tarea Completada</h4>
+    <ul id="lista">
+            <li id="item1">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <button id="completar" onclick="completar(this)">Tarea Completada</button>
+                <button id="eliminar" onclick="eliminar(this)">Eliminar</button>
+            </p>
+        </li>
+        <li id="item2">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <button id="completar" onclick="completar(this)">Tarea Completada</button>
+                <button id="eliminar" onclick="eliminar(this)">Eliminar</button>
+            </p>
+        </li>
+        <li id="item3">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <button id="completar" onclick="completar(this)">Tarea Completada</button>
+                <button id="eliminar" onclick="eliminar(this)">Eliminar</button>
+            </p>
+        </li>
+    </ul>
+
+    <textarea name="txtagregar" id="txtagregar"></textarea>
+    <button onclick="agregar()" id="btnAgregar">agregar</button>
+</body>
+<script>
+    function eliminar(button) {
+        var elementoPadre = button.parentElement;
+        var elementoPadre = elementoPadre.parentElement;
+        elementoPadre.remove();
+        console.log(parentId);
+    }
+
+    function completar(button) {
+        var elementoPadre = button.parentElement;
+        button.remove();
+        elementoPadre.style.backgroundColor = "#90EE90";
+        console.log(parentId);
+    }
+
+
+
+
+    function agregar() {
+        /*encontrar el txt y su contenido */
+        var textAgregar = document.getElementById("txtagregar").value;
+        var nuevoli = document.createElement("li");
+        var nuevop = document.createElement("p");
+        var textNode = document.createTextNode(textAgregar);
+        nuevop.appendChild(textNode);
+        nuevoli.appendChild(nuevop);
+
+        /*Formato del boton de completar */
+        var btnCompletar = document.createElement("button");
+        btnCompletar.textContent = "Tarea Completada";
+        btnCompletar.onclick = function () {
+            completar(this);
+        };
+        nuevop.appendChild(btnCompletar);
+
+        /*Formato del boton de eliminar */
+        var btnEliminar = document.createElement("button");
+        btnEliminar.textContent = "eliminar";
+        btnEliminar.onclick = function () {
+            eliminar(this);
+        };
+        nuevop.appendChild(btnEliminar);
+
+
+
+
+        const lista = document.getElementById("lista");
+        lista.appendChild(nuevoli);
+    }
+</script>
+
+</html>

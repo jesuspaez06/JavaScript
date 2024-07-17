@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lista</h1>
+   
+    <button onclick="crearLista()" id="btnAgregar">Crear lista</button>
+    <select id="listas" name="listas">
+        <option value="" disabled selected>Selecciona una Lista</option>
+    </select>
+    <textarea name="txtagregar" id="txtagregar"></textarea>
+    <button onclick="agregar()" id="btnAgregar">agregar</button>
+
+    <div id="contenido">
+
+    </div>
+
+    <script>
+        let listaContador = 1;
+        const contenidoDiv = document.getElementById('contenido');
+        const selectListas = document.getElementById('listas');
+
+        
+        function crearLista() {
+            // Crear el elemento h1
+            const h1Element = document.createElement('h1');
+            h1Element.textContent = 'Lista ' + listaContador;
+
+            // Crear el elemento ul y asignar un id único
+            const ulElement = document.createElement('ul');
+            const ulId = 'lista_' + listaContador;
+            ulElement.id = ulId;
+
+            // Crear el elemento option para el select y asignar texto
+            const optionElement = document.createElement('option');
+            optionElement.value = ulId; // Puedes usar el ID como valor del option si lo necesitas
+            optionElement.textContent = 'Lista ' + listaContador;
+
+            // Agregar el option al select
+            selectListas.appendChild(optionElement);
+            
+            // Insertar el h1 y la ul en el div
+            contenidoDiv.appendChild(h1Element);
+            contenidoDiv.appendChild(ulElement);
+
+            // Incrementar el contador de listas
+            listaContador++;
+        }
+
+        function agregar() {
+            var textAgregar = document.getElementById("txtagregar").value;
+            var nuevoli = document.createElement("li");
+            var textNode = document.createTextNode(textAgregar);
+            nuevoli.appendChild(textNode);
+
+            // Obtener el ul actual basado en el select
+            var ulId = selectListas.value; // Obtener el ID del ul seleccionado en el select
+            var ulElement = document.getElementById(ulId); // Obtener el elemento ul
+                ulElement.appendChild(nuevoli);
+            
+        }
+    </script>
+</body>
+
+</html>

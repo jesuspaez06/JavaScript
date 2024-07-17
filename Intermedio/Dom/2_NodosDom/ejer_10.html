@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj con actualización automática</title>
+</head>
+<body>
+    <h1>Hora colombiana</h1>
+    <div id="hora"></div>
+
+    <script>
+        // Función para actualizar la hora
+        function actualizarHora() {
+            const lista = document.getElementById("hora");
+
+            // Eliminar el elemento existente si ya hay uno
+            const elementoExistente = document.getElementById("hora_actual");
+            if (elementoExistente) {
+                elementoExistente.remove();
+            }
+
+            // Crear un nuevo objeto de fecha
+            const fechaActual = new Date();
+
+            // Obtener la hora actual del sistema
+            const hora = fechaActual.getHours();
+            const minutos = fechaActual.getMinutes();
+            const segundos = fechaActual.getSeconds();
+
+            // Formatear la hora como texto (agregando ceros a la izquierda si es necesario)
+            const horaFormateada = `${hora.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+
+            // Crear un nuevo elemento <h2>
+            var nuevoh2 = document.createElement("h2");
+
+            // Asignar el texto formateado como contenido del <h2>
+            nuevoh2.textContent = horaFormateada;
+
+            // Asignar un id único al <h2>
+            nuevoh2.id = "hora_actual";
+
+            // Agregar el <h2> a la lista
+            lista.appendChild(nuevoh2);
+        }
+
+        // Llamar a actualizarHora cada segundo (1000 milisegundos)
+        setInterval(actualizarHora, 1000);
+
+        // Llamar a actualizarHora también al cargar la página
+        actualizarHora();
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <h4>Ingresa comentario</h4> 
+    <textarea name="txtareacomentario" id="txtagregar"></textarea><br>
+    <button id="comentario" onclick="agregarComentario()">Agregar Comentario</button>
+    <div id="caja_comentario">
+        <h1>comentario</h1>
+    </div>
+</body>
+<script>
+    function agregarComentario(button) {
+        const contenidoDiv = document.getElementById('caja_comentario');
+        var textAgregar = document.getElementById("txtagregar").value;
+        
+        var comentario = document.createComment(textAgregar);
+
+        contenidoDiv.appendChild(comentario);
+    }
+
+</script>
+</html>
