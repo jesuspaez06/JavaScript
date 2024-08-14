@@ -1,0 +1,185 @@
+.Aicon {
+    margin-top: 20px;
+    margin-left: -46px;
+    margin-bottom: 50px;
+}
+.copiar{
+    display: none; 
+}
+#muneco {
+    width: 40vh;
+    padding-bottom: 0px;
+    display: none;
+}
+
+body {
+    background-color: #E9ECF8;
+}
+
+section {
+    margin: 20px;
+}
+
+textarea {
+    background-color: #E9ECF8;
+    width: 100%;
+    border: none;
+    resize: none;
+    outline: none;
+    overflow-y: auto;
+    min-height: 60vh;
+    color: #052051;
+    font-size: 30px;
+}
+
+
+textarea::placeholder {
+    font-weight: bold;
+    color: #052051;
+    font-size: 30px;
+}
+
+#contenido p {
+    display: flex;
+}
+
+.icono {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+#divBotones {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.encriptar {
+    background-color: #052051;
+    color: white;
+    width: 100%;
+    border-color: #052051;
+}
+.encriptar:hover {
+    background-color: #072B61;
+    border-color: #072B61;
+}
+
+.encriptar:active {
+    background-color: #0A3871;
+    border-color: #0A3871;
+}
+
+.desencriptar {
+    background-color: #ffffff;
+    color: #052051;
+    width: 100%;
+    border-color: #072B61;
+}
+.desencriptar:hover {
+    background-color: #ADB5BD;
+    color: #052051;
+    border-color: #052051;
+}
+.desencriptar:active {
+    background-color: #868E96;
+    color: #052051;
+    border-color: #052051;
+}
+#respuesta {
+    max-width: 100%; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+}
+
+#resultado2 {
+    margin-top: 10px;
+    background-color: #ffff;
+    border-radius: 15px;
+    padding: 1px;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 100%; 
+    overflow-wrap: break-word; 
+    word-break: break-word;
+}
+
+
+#resultado2 p {
+    margin:  30px;
+}
+
+#resultado2 strong {
+    font-size: 30px;
+}
+#resultado2 .copiar {
+    margin: 10px;
+    width: 80%;
+}
+
+@media (min-width: 600px) {
+    #divBotones {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    #seccionEncriptar {
+        display: flex;
+        gap: 40px;
+        height: 100vh;
+    }
+#respuesta {
+ font-size: 18px;
+}
+
+    #contenido {
+        width: 60%;
+    }
+    
+    #resultado {
+        width: 30%;
+        height: 100%;
+        padding-bottom: 40px;
+       
+    }
+
+    #resultado2 {
+        height: 100%;
+        
+    }
+
+    #resultado2 p {
+        margin: 0 30px;
+    }
+
+    #resultadoContenido {
+        flex-grow: 1;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        text-align: center; 
+        overflow-y: auto;
+    }
+
+    #muneco {
+        display: inline-block; 
+        margin: 0 auto;
+        width: 300px; 
+    }
+    #encriptador-texto-area{
+        padding: 0 80px;
+    }
+}
